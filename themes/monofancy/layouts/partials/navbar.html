@@ -1,0 +1,22 @@
+<header id="menu">
+  <div class="container">
+	<span class="logo">{{ .Site.Title }}</span>
+	<a>&#9776;</a>
+  </div>
+</header>
+
+<nav class="navbar">
+  <div class="container">
+	<div class="row">
+	  <div class="eight columns offset-by-two">
+		<ul class="">
+		  {{ $burl := .Site.BaseURL }}
+		  <li class="u-pull-left"> <a href="{{ $burl }}" class="brand" style="font-weight:bold;font-size:normal"> {{ .Site.Title }}</a> <a href="{{ $burl }}/index.xml" class="brand"><i class="fa fa-rss"></i></a></li>
+		  <li class="u-pull-right cate"> · <a href="{{ $burl }}/music">музыка</a>  <a href="{{ $burl }}/music/index.xml"><i class="fa fa-rss"></i></a></li>
+		  <li class="u-pull-right cate"> · <a href="{{ $burl }}/dreams">сны</a>  <a href="{{ $burl }}/dreams/index.xml"><i class="fa fa-rss"></i></a></li>
+		  <li class="u-pull-right cate"> <a href="{{ $burl }}/blog">блог</a>  <a href="{{ $burl }}/blog/index.xml"><i class="fa fa-rss"></i></a></li>
+		</ul>
+	  </div>
+	</div>
+  </div>
+</nav>

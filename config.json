@@ -1,0 +1,42 @@
+{
+    "contentdir": "content",
+    "layoutdir": "layouts",
+    "publishdir": "public",
+    "title": "ПЕЧЕНЫЙ",
+    "theme": "monofancy",
+
+    "builddrafts": false,
+
+    "baseurl": "https://pecheny.me",
+    "pluralizeListTitles": false,
+    "canonifyurls": true,
+
+    "permalinks": {
+        "blog": "/blog/:slug/",
+        "dreams": "/dreams/:slug/",
+        "fixed": "/:title/"
+    },
+
+    "blackfriday": {
+        "plainIdAnchors": true
+    },
+
+    "params": {
+        "title": "П Е Ч Е Н Ы Й",
+        "tagline": "О неинтересном",
+        "author": "Александр Печеный",
+        "dateform": "Feb 17 2015"
+    },
+
+    "author": {
+
+        "name": "Александр Печеный",
+        "github": "peczony",
+        "bitbucket": "pecheny",
+        "twitter": "pecheny",
+        "facebook": "pecheny",
+        "vk": "pecheny",
+        "lastfm": "aflosev",
+        "rym": "aflosev"
+    }
+}
