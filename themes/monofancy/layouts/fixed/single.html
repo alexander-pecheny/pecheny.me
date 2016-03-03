@@ -25,6 +25,7 @@
 
 		</p><h1>{{ .Title }}</h1>
 	  </div>
+	  {{ if isset .Params "toc" }}<div id="toc" class="well col-md-4 col-sm-6">{{ .TableOfContents }}</div>{{ end }}
 	  <div class="post">
 		{{ .Content }}
 	  </div>
