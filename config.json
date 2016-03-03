@@ -18,7 +18,7 @@
     },
 
     "blackfriday": {
-        "plainIdAnchors": true
+        "plainIDAnchors": true
     },
 
     "params": {
