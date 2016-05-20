@@ -3,7 +3,7 @@ categories = ["coding"]
 date = "2016-03-22"
 slug = "osxfuse-sshfs"
 title = "Solution for ‘disappearing folder’ problem in OSXFUSE+SSHFS"
-draft = true
+draft = false
 +++
 
 So as you may know, [OSXFUSE](https://osxfuse.github.io/)+[SSHFS](https://github.com/osxfuse/osxfuse/wiki/SSHFS) is a wonderful option for accessing remote servers via sftp in a convenient fashion. I’ve been using it with great pleasure to remotely edit Python scripts in Sublime Text, until the Disappearing Folder Problem came haunting over me.
