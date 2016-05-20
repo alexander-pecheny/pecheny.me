@@ -19,6 +19,7 @@ date = "2015-09-22T14:56:00Z"
 {{< la "Jay-Jay Johanson" >}}  
 {{< la "Oi Va Voi" >}}  
 {{< la "Parov Stelar" >}}  
+{{< la "Sirotkin" >}}  
 {{< la "The Kilimanjaro Darkjazz Ensemble" >}}  
 {{< la "The Real Tuesday Weld" >}}  
 {{< la "Tricky" >}}  
