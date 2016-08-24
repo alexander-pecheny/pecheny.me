@@ -12,6 +12,7 @@ date = "2015-09-22T14:56:00Z"
 {{< la "7011" >}}  
 {{< la "Another Lips" >}}  
 {{< la "Bosnian Rainbows" >}}  
+{{< la "Big Russian Boss" >}}  
 {{< la "CALLmeKAT" >}}  
 {{< la "Current 93" >}}  
 {{< la "Foals" >}}  
