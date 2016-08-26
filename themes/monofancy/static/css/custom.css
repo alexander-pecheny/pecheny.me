@@ -426,3 +426,7 @@ abbr[title]:after
 }
 
 code, kbd, pre { font-family: 'RM', monospace; }
+
+.highlight {
+    padding: 1px 10px;
+}
