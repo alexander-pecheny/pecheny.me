@@ -1,50 +1,49 @@
-@font-face {
-  font-family: 'RM';
-  font-style: normal;
-  font-weight: normal;
-  src: url(https://fonts.gstatic.com/s/robotomono/v4/N4duVc9C58uwPiY8_59Fz__WzOtAn2bfVruHu-Zkc1M.woff2) format('woff2'), url(http://fonts.gstatic.com/s/robotomono/v4/N4duVc9C58uwPiY8_59Fz_25ds880Du_gFZbUlZlsbg.woff) format('woff'), local('Roboto Mono Light'), local('RobotoMono-Light');
-}
-@font-face {
-  font-family: 'RM';
-  font-style: normal;
-  font-weight: bold;
-  src: url(https://fonts.gstatic.com/s/robotomono/v4/eJ4cxQe85Lo39t-LVoKa21tXRa8TVwTICgirnJhmVJw.woff2) format('woff2'), url(http://fonts.gstatic.com/s/robotomono/v4/eJ4cxQe85Lo39t-LVoKa2z8E0i7KZn-EPnyo3HZu7kw.woff) format('woff'), local('Roboto Mono Medium'), local('RobotoMono-Medium');
-}
-@font-face {
-  font-family: 'RM';
-  font-style: italic;
-  font-weight: normal;
-  src: url(https://fonts.gstatic.com/s/robotomono/v4/1OsMuiiO6FCF2x67vzDKAwDGpgHHqfvceT5IvLM8_bk.woff2) format('woff2'), url(http://fonts.gstatic.com/s/robotomono/v4/1OsMuiiO6FCF2x67vzDKA6WIMIB6NqpGGYBL2uCJFkY.woff) format('woff'), local('Roboto Mono Light Italic'), local('RobotoMono-LightItalic');
-}
-@font-face {
-  font-family: 'RM';
-  font-style: italic;
-  font-weight: bold;
-  src: url(https://fonts.gstatic.com/s/robotomono/v4/1OsMuiiO6FCF2x67vzDKA3t0GIdJ9R24Mxb-iX6KhIg.woff2) format('woff2'), url(http://fonts.gstatic.com/s/robotomono/v4/1OsMuiiO6FCF2x67vzDKA7eyNpl4hohYyJsaK6B7VO0.woff) format('woff'), local('Roboto Mono Medium Italic'), local('RobotoMono-MediumItalic');
+/* Webfont: Lato-LightItalic */@font-face {
+    font-family: 'Lato';
+    src: url('//cdn.jsdelivr.net/font-lato/2.0/Lato/Lato-LightItalic.eot'); /* IE9 Compat Modes */
+    src: url('//cdn.jsdelivr.net/font-lato/2.0/Lato/Lato-LightItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('//cdn.jsdelivr.net/font-lato/2.0/Lato/Lato-LightItalic.woff') format('woff'), /* Modern Browsers */
+         url('//cdn.jsdelivr.net/font-lato/2.0/Lato/Lato-LightItalic.ttf') format('truetype'); 
+    font-style: italic;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
 }
 
-/*
-@font-face {
-  font-family: 'R';
-  font-style: normal;
-  font-weight: normal;
-  src: url(http://fonts.gstatic.com/s/roboto/v15/El-bgsteBznJNL5pgUfFLA.woff2) format('woff2'), url(http://fonts.gstatic.com/s/roboto/v15/d-QWLnp4didxos_6urzFtg.woff) format('woff'), local('Roboto Light'), local('Roboto-Light');
+
+
+/* Webfont: Lato-Light */@font-face {
+    font-family: 'Lato';
+    src: url('//cdn.jsdelivr.net/font-lato/2.0/Lato/Lato-Light.eot'); /* IE9 Compat Modes */
+    src: url('//cdn.jsdelivr.net/font-lato/2.0/Lato/Lato-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('//cdn.jsdelivr.net/font-lato/2.0/Lato/Lato-Light.woff') format('woff'), /* Modern Browsers */
+         url('//cdn.jsdelivr.net/font-lato/2.0/Lato/Lato-Light.ttf') format('truetype'); 
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
 }
-@font-face {
-  font-family: 'R';
-  font-style: normal;
-  font-weight: bold;
-  src: url(http://fonts.gstatic.com/s/roboto/v15/Op9nD2u96-RO01_6Io91EA.woff2) format('woff2'), url(http://fonts.gstatic.com/s/roboto/v15/7KXg6nyyqN8gyMoNwQ7aOQ.woff) format('woff'), local('Roboto Medium'), local('Roboto-Medium');
+
+
+
+/* Webfont: Lato-Semibold */@font-face {
+    font-family: 'Lato';
+    src: url('//cdn.jsdelivr.net/font-lato/2.0/Lato/Lato-Semibold.eot'); /* IE9 Compat Modes */
+    src: url('//cdn.jsdelivr.net/font-lato/2.0/Lato/Lato-Semibold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('//cdn.jsdelivr.net/font-lato/2.0/Lato/Lato-Semibold.woff') format('woff'), /* Modern Browsers */
+         url('//cdn.jsdelivr.net/font-lato/2.0/Lato/Lato-Semibold.ttf') format('truetype'); 
+    font-style: normal;
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
 }
-@font-face {
-  font-family: 'R';
-  font-style: italic;
-  font-weight: normal;
-  src: url(http://fonts.gstatic.com/s/roboto/v15/iE8HhaRzdhPxC93dOdA051tXRa8TVwTICgirnJhmVJw.woff2) format('woff2'), url(http://fonts.gstatic.com/s/roboto/v15/iE8HhaRzdhPxC93dOdA05z8E0i7KZn-EPnyo3HZu7kw.woff) format('woff'), local('Roboto Light Italic'), local('Roboto-LightItalic');
+
+
+
+/* Webfont: Lato-SemiboldItalic */@font-face {
+    font-family: 'Lato';
+    src: url('//cdn.jsdelivr.net/font-lato/2.0/Lato/Lato-SemiboldItalic.eot'); /* IE9 Compat Modes */
+    src: url('//cdn.jsdelivr.net/font-lato/2.0/Lato/Lato-SemiboldItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('//cdn.jsdelivr.net/font-lato/2.0/Lato/Lato-SemiboldItalic.woff') format('woff'), /* Modern Browsers */
+         url('//cdn.jsdelivr.net/font-lato/2.0/Lato/Lato-SemiboldItalic.ttf') format('truetype'); 
+    font-style: italic;
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
 }
-@font-face {
-  font-family: 'R';
-  font-style: italic;
-  font-weight: bold;
-  src: url(http://fonts.gstatic.com/s/roboto/v15/daIfzbEw-lbjMyv4rMUUTltXRa8TVwTICgirnJhmVJw.woff2) format('woff2'), url(http://fonts.gstatic.com/s/roboto/v15/daIfzbEw-lbjMyv4rMUUTj8E0i7KZn-EPnyo3HZu7kw.woff) format('woff'), local('Roboto Medium Italic'), local('Roboto-MediumItalic');
-}*/

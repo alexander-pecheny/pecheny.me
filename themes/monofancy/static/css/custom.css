@@ -14,7 +14,7 @@ abbr {
 
 body {
     background-color: rgb(236,236,236);
-    font-family: "RM", monospace;
+    font-family: 'Lato', monospace;
 }
 
 body {
@@ -35,7 +35,7 @@ img {
     left:0;
     display:block;
     margin-bottom:10px;
-    font-family: "RM", monospace;
+    font-family: "Lato", monospace;
     height:2em;
     width:100%;
 }
@@ -73,12 +73,12 @@ img {
 
 
 .posts {
-    font-family: 'RM', monospace;
+    font-family: 'Lato', monospace;
     list-style-type:none;
 }
 
 .footnote {
-    font-family: 'RM', monospace;
+    font-family: 'Lato', monospace;
     color: #888;
     font-size: small;
     margin:0.7em 0 0.7em 0;
@@ -107,7 +107,7 @@ img {
 .post {
     z-index:9;
     display:block;
-    font-family: 'RM', monospace;
+    font-family: 'Lato', monospace;
     color: #555;
     overflow:auto;
     padding:0;
@@ -118,9 +118,13 @@ img {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'RM', monospace;
+    font-family: 'Lato', monospace;
     color: #555;
     font-size: 16px;
+    font-variant-numeric: lining-nums;
+    -moz-font-feature-settings: "lnum";
+    -webkit-font-feature-settings: "lnum";
+    font-feature-settings: "lnum";
 }
 
 #post-title h1 {
@@ -174,7 +178,7 @@ h4 {
 }
 
 .scaps{
-    letter-spacing: 0.2em;
+    letter-spacing: 0.13em;
     font-kerning: normal;
     font-size: 0.84em;
     text-transform: uppercase;
@@ -239,7 +243,7 @@ h4 {
     overflow:hidden;
     margin-left:-1rem;
     margin-right:-1rem;
-    font-family:"RM", monospace;
+    font-family:'Lato', monospace;
     color: #ccc;
     text-align:center
 }
@@ -361,7 +365,7 @@ nav.pagination .summary{
 
 nav#TableOfContents {
     color: #888;
-    font-family: 'RM', monospace;
+    font-family: 'Lato', monospace;
     margin: 0;
     padding: 0.5em;
     background-color: #dfdfdf;
@@ -425,7 +429,7 @@ abbr[title]:after
     padding: 7px;
 }
 
-code, kbd, pre { font-family: 'RM', monospace; }
+code, kbd, pre { font-family: 'Lato', monospace; }
 
 .highlight {
     padding: 1px 10px;
