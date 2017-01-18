@@ -14,6 +14,7 @@
     "permalinks": {
         "blog": "/blog/:slug/",
         "dreams": "/dreams/:slug/",
+        "friendsdreams": "/friendsdreams/:slug/",
         "fixed": "/:title/"
     },
 
