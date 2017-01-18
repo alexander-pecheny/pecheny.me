@@ -6,6 +6,7 @@
 	<div class="eight columns offset-by-two">
 	<div id="post-title"><h1>Сны</h1></div>
 	<p class="posts">Я систематически записываю сны с 2013 года, сейчас их {{ .Paginator.TotalNumberOfElements }}. Мне и некоторым другим кажется, что они могут быть небезынтересны для чтения праздным вечером, поэтому выкладываю их здесь. Многие из них содержат обсценную лексику или <span class="scaps">nsfw</span>-контент, специально такие сны не помечаю.</p>
+	<p>Можете ещё почитать <a href="{{ .Site.BaseURL }}/friendsdreams">сны моих друзей</a>.</p>
 	  <ul class="posts">
 		{{ $baseurl := .Site.BaseURL }}
 		{{ range $name, $page := .Paginator.Pages }}

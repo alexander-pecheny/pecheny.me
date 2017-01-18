@@ -5,7 +5,7 @@
   <div class="row">
 	<div class="eight columns offset-by-two">
 	<div id="post-title"><h1>Сны друзей</h1></div>
-	<p class="posts">В 2016 году я решил записывать, ещё и сны друзей, сейчас их {{ .Paginator.TotalNumberOfElements }}.</p>
+	<p class="posts">В 2016 году я решил записывать ещё и сны друзей, сейчас их {{ .Paginator.TotalNumberOfElements }}.</p>
 	  <ul class="posts">
 		{{ $baseurl := .Site.BaseURL }}
 		{{ range $name, $page := .Paginator.Pages }}
