@@ -5,7 +5,7 @@ date = "2015-01-01"
 
 ![](https://pecheny.me/img/etoya.png)
 
-<p style="text-align: center; font-weight: bold;"><a href="blog/">блог</a> · <a href="dreams/">сны</a> · <a href="music/">музыка</a> · <a class="scaps" href="http://rateyourmusic.com/~aflosev">rym</a><br/><a href="http://last.fm/user/aflosev"><i class="fa fa-lastfm"></i></a> · <a href="https://twitter.com/pecheny"><i class="fa fa-twitter"></i></a> · <a href="https://bitbucket.com/pecheny"><i class="fa fa-bitbucket"></i></a> · <a href="https://github.com/peczony"><i class="fa fa-github"></i></a> · <a href="https://telegram.me/pecheny"><i class="fa fa-paper-plane"></i></a> · <a href="https://vk.com/pecheny"><i class="fa fa-vk"></i></a></p>
+<p style="text-align: center; font-weight: bold;"><a href="blog/">блог</a> · <a href="dreams/">сны</a> · <a href="friendsdreams/">сны друзей</a> · <a href="music/">музыка</a> · <a class="scaps" href="http://rateyourmusic.com/~aflosev">rym</a><br/><a href="http://last.fm/user/aflosev"><i class="fa fa-lastfm"></i></a> · <a href="https://twitter.com/pecheny"><i class="fa fa-twitter"></i></a> · <a href="https://bitbucket.com/pecheny"><i class="fa fa-bitbucket"></i></a> · <a href="https://github.com/peczony"><i class="fa fa-github"></i></a> · <a href="https://telegram.me/pecheny"><i class="fa fa-paper-plane"></i></a> · <a href="https://vk.com/pecheny"><i class="fa fa-vk"></i></a></p>
 
 Меня зовут Саша Печеный. Я читаю и пишу [тексты](blog), [музыку](music) и [код на Питоне](https://bitbucket.org/pecheny).
 
