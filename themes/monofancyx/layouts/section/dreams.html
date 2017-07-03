@@ -1,0 +1,46 @@
+{{ partial "header.html" . }}
+{{ partial "navbar.html" . }}
+
+<div class="container away">
+  <div class="row">
+	<div class="eight columns offset-by-two">
+	<div id="post-title"><h1>Сны</h1></div>
+	<p class="posts">Я систематически записываю сны с 2013 года, сейчас их {{ .Paginator.TotalNumberOfElements }}. Мне и некоторым другим кажется, что они могут быть небезынтересны для чтения праздным вечером, поэтому выкладываю их здесь. Многие из них содержат обсценную лексику или <span class="scaps">nsfw</span>-контент, специально такие сны не помечаю.</p>
+	<p>Можете ещё почитать <a href="{{ .Site.BaseURL }}/friendsdreams">сны моих друзей</a>.</p>
+	  <ul class="posts">
+		{{ $baseurl := .Site.BaseURL }}
+		{{ range $name, $page := .Paginator.Pages }}
+		{{ if eq .Type "dreams" }}
+		<li>
+		  <a href="{{ .Permalink }}">{{ $page.Title }}</a>
+
+		  <p class="footnote">
+			submitted <time datetime="{{ $page.Date.Format "2006-01-02T15:04:05Z07:00" }}" class="post-list timeago">{{ $page.Date.Format "2006-01-02T15:04:05Z07:00" }}</time>
+
+			{{ if or $page.Params.tags $page.Params.categories $page.Params.series }}
+			to
+			{{ end }}
+
+			{{ with $page.Params.tags }}
+			tags: [ {{ range $page.Params.tags}}<a href="{{ $baseurl }}/tags/{{ . | urlize }}">{{ . }}</a> {{ end }}]
+			{{ end }}
+
+			{{ with $page.Params.categories }}
+			categories: [ {{ range $page.Params.categories }}<a href="{{ $baseurl }}/categories/{{ . | urlize }}">{{ . }}</a> {{ end }}]
+			{{ end }}
+
+			{{ with $page.Params.series }}
+			series: [ {{ range $page.Params.series }}<a href="{{ $baseurl }}/series/{{ . | urlize }}">{{ . }}</a> {{ end }}]
+			{{ end }}
+
+		  </p>
+		  <p class="footnote summary">{{ .Summary }}{{ if .Truncated}} <a href="{{ .Permalink }}" style="font-weight: bold;">···</a>{{end}}</p>
+		</li>
+		{{ end }}
+		{{ end }}
+	  </ul>
+	  {{ partial "pagination.html" . }}
+	</div>
+  </div>
+</div>
+{{ partial "footer.html" . }}
