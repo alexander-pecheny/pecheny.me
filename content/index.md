@@ -9,7 +9,7 @@ date = "2015-01-01"
 
 Меня зовут Саша Печеный. Я читаю и пишу [тексты](blog), [музыку](music) и [код на Питоне](https://bitbucket.org/pecheny).
 
-Я закончил [<span class="scaps">от<span style="font-size: 0.9em">и</span>пл</span>](https://ru.wikipedia.org/wiki/Отделение_теоретической_и_прикладной_лингвистики), недолго работал (скорее стажировался) в <span class="scaps">abbyy</span>, потом в паре стартапов, а сейчас — в Яндексе.
+Закончил [<span class="scaps">от<span style="font-size: 0.9em">и</span>пл</span>](https://ru.wikipedia.org/wiki/Отделение_теоретической_и_прикладной_лингвистики), работаю в Яндексе.
 
 Делаю полезное: музыканту — [генератор сетлистов](https://bitbucket.org/pecheny/other/src/tip/trackgen/trackgen.py), любителю интеллектуальных игр — [систему](https://bitbucket.org/pecheny/chgksuite) для работы с пакетами, [группу](https://vk.com/schoolchgk) и [календарь](https://pecheny.me/calendar) про школьное <span class="scaps">чгк</span>.
 
