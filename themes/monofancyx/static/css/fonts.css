@@ -1,7 +1,7 @@
 /* Webfont: Vollkorn-LightItalic */@font-face {
-    font-family: 'Vollkorn-Italic';
+    font-family: 'Vollkorn';
     src: url('//pecheny.me/fonts/Vollkorn-Italic.eot'); /* IE9 Compat Modes */
-    src: local('Vollkorn'), url('//pecheny.me/fonts/Vollkorn-Italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    src: local('Vollkorn-Italic'), url('//pecheny.me/fonts/Vollkorn-Italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
          url('//pecheny.me/fonts/Vollkorn-Italic.woff') format('woff'), /* Modern Browsers */
          url('//pecheny.me/fonts/Vollkorn-Italic.ttf') format('truetype'); 
     font-style: italic;
@@ -26,10 +26,10 @@
 
 /* Webfont: Vollkorn-Semibold */@font-face {
     font-family: 'Vollkorn';
-    src: url('//pecheny.me/fonts/Vollkorn-Semibold.eot'); /* IE9 Compat Modes */
-    src: local('Vollkorn-Semibold'), url('//pecheny.me/fonts/Vollkorn-Semibold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('//pecheny.me/fonts/Vollkorn-Semibold.woff') format('woff'), /* Modern Browsers */
-         url('//pecheny.me/fonts/Vollkorn-Semibold.ttf') format('truetype'); 
+    src: url('//pecheny.me/fonts/Vollkorn-Bold.eot'); /* IE9 Compat Modes */
+    src: local('Vollkorn-Bold'), url('//pecheny.me/fonts/Vollkorn-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('//pecheny.me/fonts/Vollkorn-Bold.woff') format('woff'), /* Modern Browsers */
+         url('//pecheny.me/fonts/Vollkorn-Bold.ttf') format('truetype'); 
     font-style: normal;
     font-weight: bold;
     text-rendering: optimizeLegibility;

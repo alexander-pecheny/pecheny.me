@@ -373,7 +373,7 @@ nav#TableOfContents {
     font-family: "Vollkorn", serif;
     margin: 0;
     padding: 0.5em;
-    background-color: #eae7d5;
+    background-color: #efecda;
     font-size: 0.9em /*smaller*/;
 }
 
@@ -402,8 +402,8 @@ nav#TableOfContents ul li {
     }
 }
 
-.example {padding: 0.5em; margin: 1em 0; background-color: #eae7d5; color: #826c53;}
-.inline-example { background-color: #eae7d5; padding: 0.1em 0.3em; color: #826c53; box-decoration-break: clone;}
+.example {padding: 0.5em; margin: 1em 0; background-color: #efecda; color: #826c53;}
+.inline-example { background-color: #efecda; padding: 0.1em 0.3em; color: #826c53; box-decoration-break: clone;}
 .black {color: #101010;}
 
 abbr[title]:after
