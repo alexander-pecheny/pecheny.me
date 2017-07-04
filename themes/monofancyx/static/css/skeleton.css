@@ -163,9 +163,13 @@ a {
   position: relative;
   padding-bottom: 0px;
   text-decoration: none;
+  background-image: linear-gradient(to right, #5fa8d3 75%, #5fa8d3 75%);
+  background-position: 0 1.26em;
+  background-repeat: repeat-x;
+  background-size: 20px 4px;
 }
 
-a::after{
+/*a::after{
   content:'';
   position:absolute;
   width: 100%;
@@ -173,7 +177,7 @@ a::after{
   left:0;
   bottom: 1px;
   border-bottom: 4px solid #5fa8d3;
-}
+}*/
 
 /*.navbar a::after{
   border-bottom: 0;
