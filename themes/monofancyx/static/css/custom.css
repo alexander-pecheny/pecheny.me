@@ -155,7 +155,7 @@ h2 {
 
 h3 {
     font-size: 1.4em;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.02em;
     font-style: italic;
     text-align: center;
     margin: 1em 0;
@@ -182,11 +182,13 @@ h4 {
 }
 
 .scaps{
-    letter-spacing: 0.13em;
+    /*letter-spacing: 0.13em;
     font-kerning: normal;
     font-size: 0.84em;
-    text-transform: uppercase;
-    /*font-variant: small-caps;*/
+    text-transform: uppercase;*/
+    letter-spacing: 0.05em;
+    text-transform: lowercase;
+    font-variant: small-caps;
 }
 
 @media screen and (max-width:768px){
@@ -427,10 +429,12 @@ abbr[title]:after
 }
 
 ::selection {
-    background-color: #fff;
+    background-color: #6A0136;
+    color: #fff;
 }
 ::-moz-selection {
-    background-color: #fff;
+    background-color: #6A0136;
+    color: #fff;
     padding: 7px;
 }
 
