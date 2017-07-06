@@ -126,48 +126,45 @@ img {
 h1, h2, h3, h4, h5, h6 {
     font-family: "Vollkorn", serif;
     color: #231d16;
-    font-variant-numeric: lining-nums;
+    /*font-variant-numeric: lining-nums;
     -moz-font-feature-settings: "lnum";
     -webkit-font-feature-settings: "lnum";
-    font-feature-settings: "lnum";
+    font-feature-settings: "lnum";*/
 }
 
 #post-title h1 {
     font-size: 1.8em;
+    text-align: center;
 }
 
 h1 {
     font-size: 1.6em;
-    letter-spacing: 0.1em;
     font-weight: bold;
-    text-align: center;
     margin: 1em 0;
-    text-transform: uppercase;
 }
 
 h2 {
-    font-size: 1.5em;
-    /*font-style: italic;*/
-    letter-spacing:normal;
-    font-weight: normal;
-    text-align: center;
+    font-size: 1.4em;
+    font-style: italic;
+    margin: 1em 0;
+    /*font-weight: normal;*/
 }
 
 h3 {
-    font-size: 1.4em;
-    letter-spacing: 0.02em;
-    font-style: italic;
+    font-size: 1.1em;
+    font-weight: bold;
     text-align: center;
-    margin: 1em 0;
-    font-weight: normal;
+    padding: 0 2em 0 0;
 }
 
 h4 {
-    font-size: 1.3em;
+    font-size: 1em;
+    font-variant-caps: all-small-caps;
     letter-spacing: 0.1em;
-    text-align: center;
-    margin: 1em 0;
-    font-weight: normal;
+}
+
+h5 {
+    font-style: italic;
 }
 
 /* h5 and h6 will probably never be used*/
