@@ -402,6 +402,7 @@ nav#TableOfContents ul li {
 }
 
 .example {padding: 0.5em; margin: 1em 0; background-color: #efecda; color: #826c53;}
+.example-hidden {color: #efecda;}
 .inline-example { background-color: #efecda; padding: 0.1em 0.3em; color: #826c53; box-decoration-break: clone;}
 .black {color: #101010;}
 
