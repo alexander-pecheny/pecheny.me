@@ -184,8 +184,8 @@ h5 {
     font-size: 0.84em;
     text-transform: uppercase;*/
     letter-spacing: 0.05em;
-    text-transform: lowercase;
-    font-variant: small-caps;
+    /*text-transform: lowercase;*/
+    font-variant: all-small-caps;
 }
 
 @media screen and (max-width:768px){
