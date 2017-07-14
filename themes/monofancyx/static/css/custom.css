@@ -178,6 +178,8 @@ h5 {
     margin-top:2em;
 }
 
+.logo { letter-spacing: 0.2em; }
+
 .scaps{
     /*letter-spacing: 0.13em;
     font-kerning: normal;
