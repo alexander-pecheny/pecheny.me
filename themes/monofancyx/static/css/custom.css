@@ -95,7 +95,6 @@ img {
 }
 
 .summary {
-    color: #231d16;
     font-size: 0.9em /*smaller*/;
 }
 
@@ -114,7 +113,6 @@ img {
     z-index:9;
     display:block;
     font-family: "Vollkorn", serif;
-    color: #231d16;
     overflow:auto;
     padding:0;
     padding-bottom:1em;
@@ -125,7 +123,6 @@ img {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: "Vollkorn", serif;
-    color: #231d16;
     /*font-variant-numeric: lining-nums;
     -moz-font-feature-settings: "lnum";
     -webkit-font-feature-settings: "lnum";
@@ -135,6 +132,18 @@ h1, h2, h3, h4, h5, h6 {
 #post-title h1 {
     font-size: 1.8em;
     text-align: center;
+}
+
+.spaced {
+    letter-spacing: 0.1em;
+}
+
+.lnum {
+    font-feature-settings: "lnum";
+}
+
+.tnum {
+    font-feature-settings: "tnum";
 }
 
 h1 {
@@ -250,7 +259,6 @@ h5 {
     margin-left:-1rem;
     margin-right:-1rem;
     font-family:"Vollkorn", serif;
-    color: #231d16;
     text-align:center
 }
 
@@ -321,7 +329,6 @@ a.pagination-item:hover{
 
 .pagination>.active>a,.pagination>.active>span,.pagination>.active>a:hover,.pagination>.active>span:hover,.pagination>.active>a:focus,.pagination>.active>span:focus{
     z-index:2;
-    color:#231d16;
     cursor:default
 }
 
