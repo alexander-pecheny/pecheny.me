@@ -11,7 +11,7 @@ date = "2015-01-01"
 
 Закончил [<span class="scaps">ОТИПЛ</span>](https://ru.wikipedia.org/wiki/Отделение_теоретической_и_прикладной_лингвистики), работаю в Яндексе.
 
-Делаю полезное: музыканту — [генератор сетлистов](https://bitbucket.org/pecheny/other/src/tip/trackgen/trackgen.py), любителю интеллектуальных игр — [систему](https://bitbucket.org/pecheny/chgksuite) для работы с пакетами, [группу](https://vk.com/schoolchgk) и [календарь](https://pecheny.me/calendar) про школьное <span class="scaps">чгк</span>.
+Делаю полезное: музыканту — [генератор сетлистов](https://bitbucket.org/pecheny/other/src/tip/trackgen/trackgen.py), любителю интеллектуальных игр — [систему](https://bitbucket.org/pecheny/chgksuite) для работы с пакетами, [группу](https://vk.com/schoolchgk) и [календарь](https://pecheny.me/calendar) про школьное <span class="scaps">чгк</span>. Провожу школьный фестиваль интеллектуальных игр «[Открытый кубок Хамовников](/okx)».
 
 Со мной можно [разными](https://telegram.me/pecheny) [способами](https://vk.com/pecheny) [связаться](mailto:ap@pecheny.me).</p>
 
