@@ -33,6 +33,7 @@ date = "2015-09-22T14:56:00Z"
 {{< la "Jay-Jay Johanson" >}}  
 {{< la "Kendrick Lamar" >}}  
 {{< la "King Gizzard & the Lizard Wizard" >}}  
+{{< la "Kraków Loves Adana" >}}  
 {{< la "Lucidvox" >}}  
 {{< la "Lykke Li" >}}  
 {{< la "Oi Va Voi" >}}  
