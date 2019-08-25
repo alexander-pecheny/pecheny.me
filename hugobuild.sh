@@ -1,3 +1,3 @@
 rm -r public
 hugo
-cp -r public/* ~/peczony/
+cp -r public/* ~/peczony.github.io/
