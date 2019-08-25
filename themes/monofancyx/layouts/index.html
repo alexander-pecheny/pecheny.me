@@ -2,8 +2,7 @@
 
 <div class="container away">
   <div class="row">
-    <div class="eight columns offset-by-two">{{ range .Data.Pages }}{{if eq .Type "index" }}{{.Content}}{{end}}{{ end }}
-    </div>
+    <div class="eight columns offset-by-two">{{ .Content }}</div>
   </div>
 </div>
 
