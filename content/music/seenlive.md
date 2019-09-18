@@ -1,6 +1,7 @@
 +++
 title = "Видел вживую"
 type = "fixed"
+datepublish = true
 date = "2019-09-18T23:13:00Z"
 +++
 
