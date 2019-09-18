@@ -1,7 +1,7 @@
 +++
 title = "Видел вживую"
 type = "fixed"
-date = "2019-08-24T23:13:00Z"
+date = "2019-09-18T23:13:00Z"
 +++
 
 {{< la "Петля Пристрастия" >}} (×7)  
@@ -43,8 +43,10 @@ date = "2019-08-24T23:13:00Z"
 {{< la "King Gizzard & the Lizard Wizard" >}}  
 {{< la "kommunikация" >}}  
 {{< la "Kraków Loves Adana" >}}  
+{{< la "LATEXFAUNA" >}}  
 {{< la "Lucidvox" >}}  
 {{< la "Lykke Li" >}}  
+{{< la "nothing,nowhere." >}}  
 {{< la "Oi Va Voi" >}}  
 {{< la "Parov Stelar" >}}  
 {{< la "Pharaoh" >}}  
