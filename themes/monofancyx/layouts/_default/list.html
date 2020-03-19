@@ -5,8 +5,8 @@
 <div class="container away">
   <div class="row">
 	<div class="eight columns offset-by-two">
-	  <p style="margin-bottom:1em;font-weight:bold;color:#333">{{ .Title }}:</p>
-
+	 <div id="post-title"><h1>{{ .Title }}</h1></div>
+	<p class="posts">{{ .Content }}</p>
 	  <ul class="posts">
 		{{ $baseurl := .Site.BaseURL }}
 		{{ range $name, $page := .Data.Pages }}
