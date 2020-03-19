@@ -38,5 +38,12 @@
         "vk": "pecheny",
         "lastfm": "aflosev",
         "rym": "aflosev"
-    }
+    },
+     "markup": {
+      "goldmark": {
+         "renderer": {
+            "unsafe": true
+         }
+      }
+   }
 }
