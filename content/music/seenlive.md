@@ -2,25 +2,27 @@
 title = "Видел вживую"
 type = "fixed"
 datepublish = true
-date = "2019-09-18T20:13:00Z"
+date = "2019-03-20T00:13:00+03:00"
 +++
 
+Отметил звёздочкой особо понравившиеся концерты/сеты.
+
 {{< la "Петля Пристрастия" >}} (×7)  
+{{< la "Барон" >}} (×4)  
 {{< la "Псой Короленко" >}} (×4)  
-{{< la "Барон" >}} (×3)  
 {{< la "Arms and Sleepers" >}} (×2)  
 {{< la "Cigarettes After Sex" >}} (×2)  
 {{< la "Зарница" >}} (×2)  
 {{< la "Комба Бакх" >}} (×2)  
 {{< la "Монеточка" >}} (×2)  
-{{< la "Псой и Опа!" >}} (×2)  
-{{< la "Созвездие Отрезок" >}} (×2)  
-{{< la "4 Позиции Бруно" >}}  
+{{< la "Псой и Опа!" >}} ⭐ (×2)  
+{{< la "Созвездие Отрезок" >}} ⭐ (×2)  
+{{< la "4 Позиции Бруно" >}} ⭐  
 {{< la "6lack" >}}  
 {{< la "7011" >}}  
 {{< la "Anna of the North" >}}  
 {{< la "Another Lips" >}}  
-{{< la "Arcade Fire" >}}  
+{{< la "Arcade Fire" >}} ⭐  
 {{< la "Arctic Monkeys" >}}  
 {{< la "Bad Zu" >}}  
 {{< la "Big Russian Boss" >}}  
@@ -44,9 +46,10 @@ date = "2019-09-18T20:13:00Z"
 {{< la "King Gizzard & the Lizard Wizard" >}}  
 {{< la "kommunikация" >}}  
 {{< la "Kraków Loves Adana" >}}  
-{{< la "LATEXFAUNA" >}}  
+{{< la "LATEXFAUNA" >}} ⭐  
 {{< la "Lucidvox" >}}  
 {{< la "Lykke Li" >}}  
+{{< la "Matt Elliott" >}} ⭐  
 {{< la "nothing,nowhere." >}}  
 {{< la "Oi Va Voi" >}}  
 {{< la "Parov Stelar" >}}  
@@ -54,7 +57,7 @@ date = "2019-09-18T20:13:00Z"
 {{< la "Sirotkin" >}}  
 {{< la "Shame" >}}  
 {{< la "Slaves" >}}  
-{{< la "Souloud" >}}  
+{{< la "Souloud" >}} ⭐  
 {{< la "St. Vincent" >}}  
 {{< la "The Kilimanjaro Darkjazz Ensemble" >}}  
 {{< la "The Real Tuesday Weld" >}}  
