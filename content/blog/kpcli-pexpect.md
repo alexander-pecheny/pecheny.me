@@ -127,4 +127,4 @@ if __name__ == "__main__":
     main()
 {{< /highlight >}}
 
-You can get the workflow [here](https://dl.dropboxusercontent.com/u/24653887/keepass.alfredworkflow). It doesn’t have an icon because fuck it. Enjoy!
+You can get the workflow [here](https://drive.google.com/open?id=14ArdaQWC0rdOaOghRFN2sguf0dSOWCW2). It doesn’t have an icon because fuck it. Enjoy!
