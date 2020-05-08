@@ -44,6 +44,11 @@
          "renderer": {
             "unsafe": true
          }
+      },
+      "tableOfContents": {
+         "endLevel": 3,
+         "ordered": true,
+         "startLevel": 1
       }
    }
 }
