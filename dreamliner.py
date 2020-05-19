@@ -48,7 +48,7 @@ def main():
     with open(filepath, "w") as f:
         f.write(front_matter + (text or ""))
 
-    subprocess.call(["git", "add", filepath])
+    print("git add '{}'".format(filepath))
     subprocess.call(["subl", filepath])
     print(
         "https://t.me/iv?url=https://pecheny.me/dreams/{}&rhash=48c1d98f09a339".format(
