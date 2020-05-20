@@ -3,6 +3,7 @@ date = "2015-07-24"
 title = "Музыка"
 description = "Музыкальные проекты, концерты и прочее"
 type = "fixed"
+suppressList = true
 url = "/music"
 datepublish = true
 +++
@@ -32,7 +33,7 @@ datepublish = true
 
 Авторская песня. Экзистенция и алкоголизм.
 
-# [{{< sc "МГИМБ" >}}](mgimb)
+# [{{% sc "МГИМБ" %}} ](mgimb)
 
 Акустический постмодернистский панк.
 

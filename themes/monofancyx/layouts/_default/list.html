@@ -10,6 +10,7 @@
 	  <ul class="posts">
 		{{ $baseurl := .Site.BaseURL }}
 		{{ $section := . }}
+		{{ if ne .Params.suppressList true }}
 		{{ range $name, $page := .Paginator.Pages }}
 		{{ if eq .Type $section.Type }}
 		<li>
@@ -37,6 +38,7 @@
 		  </p>
 		  <p class="footnote summary">{{ .Summary }}{{ if .Truncated}} <a href="{{ .Permalink }}" style="font-weight: bold;">· · ·</a>{{end}}</p>
 		</li>
+		{{ end }}
 		{{ end }}
 		{{ end }}
 	  </ul>
