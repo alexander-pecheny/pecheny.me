@@ -25,6 +25,8 @@
   <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/normalize.css">
   <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/skeleton.css">
   <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/custom.css">
+  {{ template "_internal/opengraph.html" . }}
+  {{ template "_internal/twitter_cards.html" . }}
 </head>
 <body>
 <div class="grand-wrapper">
