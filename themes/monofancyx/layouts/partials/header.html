@@ -4,8 +4,8 @@
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>{{ if .IsPage }}{{ .Title }}{{else}}{{ if eq .URL "/blog/" }}Блог{{end}}{{ if eq .URL "/dreams/" }}Сны{{end}}{{ if eq .URL "/" }}ПЕЧЕНЫЙ{{end}}{{ end }}</title>
-  <meta name="description" content="{{ .Title }}">
+  <title>{{ .Title }}</title>
+  <meta name="description" content="{{ .Description }}">
   <meta name="author" content="{{ .Site.Author.name }}">
 
   <!-- Mobile Specific Metas
