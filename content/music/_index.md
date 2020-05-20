@@ -1,6 +1,7 @@
 +++
 date = "2015-07-24"
 title = "Музыка"
+description = "Музыкальные проекты, концерты и прочее"
 type = "fixed"
 url = "/music"
 datepublish = true
