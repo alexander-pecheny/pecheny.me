@@ -451,4 +451,4 @@ code, kbd, pre { font-family: monospace; }
     padding: 1px 10px;
 }
 
-li p { display: inline; }
+.footnotes li p { display: inline; }
