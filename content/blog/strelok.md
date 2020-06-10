@@ -2,7 +2,7 @@
 categories = ["чгк"]
 date = "2016-07-20T23:22:00+03:00"
 slug = "rules-strelok"
-title = "Правила игры «Хамовнический стрелок»"
+title = "Правила игры «Хамовнический стрелок»"
 type = "blog"
 aliases = ["/strelok"]
 +++
