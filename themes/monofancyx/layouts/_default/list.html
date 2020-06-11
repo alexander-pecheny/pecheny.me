@@ -1,5 +1,10 @@
 {{ partial "header.html" . }}
+{{ $relsub := substr .RelPermalink 0 4 }}
+{{ if eq $relsub "/okx" }}
+{{ partial "navbar_okx.html" . }}
+{{ else }}
 {{ partial "navbar.html" . }}
+{{ end }}
 
 
 <div class="container away">

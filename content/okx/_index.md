@@ -1,7 +1,8 @@
 +++
 date = "2017-07-18"
 title = "Открытый кубок Хамовников"
-type = "fixed"
+type = "okx"
+suppressList = true
 url = "/okx"
 +++
 
