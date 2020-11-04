@@ -120,10 +120,15 @@ are based on 10px sizing. So basically 1.5rem = 15px :) */
 html {
   font-size: 62.5%; }
 body {
-  font-size: 24px; /* currently ems cause chrome bug misinterpreting rems on body element */
+  font-size: 16px;
   line-height: 1.6;
   font-family: "Vollkorn", serif;
   color: #231d16; }
+
+@media (min-width: 550px) { body {font-size: 18px;} }
+@media (min-width: 800px) { body {font-size: 20px;} }
+@media (min-width: 1000px) { body {font-size: 22px;} }
+@media (min-width: 1400px) { body {font-size: 24px;} }
 
 
 /* Typography
