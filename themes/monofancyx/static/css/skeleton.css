@@ -325,6 +325,8 @@ ul {
   list-style: square inside; }
 ol {
   list-style: decimal inside; }
+.post ol {list-style: decimal outside;}
+.post ul {list-style: decimal outside;}
 ol, ul {
   padding-left: 0;
   margin-top: 0; }
@@ -335,7 +337,9 @@ ol ul {
   margin: 1.5rem 0 1.5rem 3rem;
   font-size: 90%; }
 li {
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem; 
+}
+.post li {margin-left: 5rem;}
 
 
 /* Code
