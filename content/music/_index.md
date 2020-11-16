@@ -8,6 +8,8 @@ url = "/music"
 datepublish = true
 +++
 
+[<i class="fa  fa-paper-plane"></i> Телеграм-канал про музыку](https://t.me/aflosev)
+
 [Концерты](seenlive), на которых я был
 
 Лучшая (поп-)музыка: [2012](http://rateyourmusic.com/collection/aflosev/strm_relyear,ss.rd.ed/2012), [2013](http://rateyourmusic.com/collection/aflosev/strm_relyear,ss.rd.ed/2013), [2014](http://rateyourmusic.com/collection/aflosev/strm_relyear,ss.rd.ed/2014), [2015](http://rateyourmusic.com/collection/aflosev/strm_relyear,ss.rd.ed/2015), [всех времён](http://rateyourmusic.com/collection/aflosev/strm_relyear,ss.rd.a.ed)
