@@ -49,7 +49,7 @@ def main():
         f.write(front_matter + (text or ""))
 
     print("git add '{}'".format(filepath))
-    subprocess.call(["subl", filepath])
+    subprocess.call(["code", filepath])
     print(
         "https://t.me/iv?url=https://pecheny.me/dreams/{}&rhash=48c1d98f09a339".format(
             slug
