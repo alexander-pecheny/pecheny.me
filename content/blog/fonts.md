@@ -30,7 +30,7 @@ aliases = ["/fonts"]
 ## Без засечек
 
 ![](https://i.imgur.com/eQIKbGO.png)
-[PT Root UI](https://www.paratype.ru/fonts/pt/pt-root-ui) — украшение серии PT, отличный кириллический DIN. Минусы — нет на гугл фонтс; узость букв может негативно влиять на читабельность в маленьких кеглях.
+~~[PT Root UI](https://www.paratype.ru/fonts/pt/pt-root-ui) — украшение серии PT, отличный кириллический DIN. Минусы — нет на гугл фонтс; узость букв может негативно влиять на читабельность в маленьких кеглях.~~ [Паратайп оказались фашистами](https://twitter.com/rasskazov/status/1575125976585060352), не используйте их шрифты.
 
 ![](https://i.imgur.com/5qeFfGX.png)
 [Commissioner](https://fonts.google.com/specimen/Commissioner) — широкий шрифт (то есть более читаемый, чем узкий PT Root). На гугл фонтс нет италиков (ну как италиков, это просто slanted версия), зато они есть [на гитхабе](https://github.com/kosbarts/Commissioner/releases). Есть проблемы с кернингом кириллицы.
