@@ -2,6 +2,10 @@ const pos = document.querySelector("#pos");
 const questions = document.querySelector("#questions");
 const difficulty = document.querySelector("#difficulty");
 const result = document.querySelector("#result");
+const old_rating = document.querySelector("#old_rating");
+const old_questions = document.querySelector("#old_questions");
+const old_difficulty = document.querySelector("#old_difficulty");
+const old_result = document.querySelector("#old_result");
 
 function choose_coeff(_pos) {
     if (1 <= _pos && _pos <= 10) {
@@ -47,7 +51,21 @@ function calculate() {
     result.innerHTML = expected_questions;
 }
 
+function old_calculate() {
+    _old_rating = old_rating.value;
+    _old_questions = old_questions.value;
+    _old_difficulty = old_difficulty.value;
+    expected_questions = _old_questions - (
+        Math.round(_old_difficulty * 500 * _old_questions / _old_rating)
+    );
+    old_result.innerHTML = expected_questions;
+}
+
 pos.addEventListener("input", calculate);
 questions.addEventListener("input", calculate);
 difficulty.addEventListener("input", calculate);
+old_rating.addEventListener("input", old_calculate);
+old_questions.addEventListener("input", old_calculate);
+old_difficulty.addEventListener("input", old_calculate);
 document.addEventListener("DOMContentLoaded", calculate);
+document.addEventListener("DOMContentLoaded", old_calculate);
