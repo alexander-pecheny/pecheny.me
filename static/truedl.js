@@ -46,8 +46,9 @@ function calculate() {
     _difficulty = difficulty.value;
     coeff = choose_coeff(_pos);
     expected_questions = Math.round(
-        _questions * coeff * _difficulty / 10.0
+        (1 - (_difficulty / 10)) * _questions * coeff
     );
+    expected_questions = Math.min(expected_questions, _questions);
     result.innerHTML = expected_questions;
 }
 
