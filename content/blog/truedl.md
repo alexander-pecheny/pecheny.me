@@ -113,15 +113,6 @@ TrueDL=5.0 у синхрона из 36 вопросов означает: к
 3001–5000 — 0.31
 ```
 
-Теперь останется такая проблема: команды на местах 250 и 251 скорее всего покажут достаточно похожие результаты, но если следовать коэффициентам выше, формула для них будет показывать очень разные значения. Чтобы считать сложность более точно, нам нужно подобрать непрерывную функцию, отталкиваясь от значений выше.
-
-Сделав это, получим следующую функцию:
-
-```python
-def get_coeff(rank):
-    return round(-0.29 * np.log(rank + 46.8) + 2.75, 2)
-```
-
 ## Формула trueDL
 
 Теперь мы можем вывести формулу, по которой считается trueDL:
@@ -131,14 +122,14 @@ trueDL = (1 — min(Q / C, N) / N) × 10
 ```
 
 `Q` — вопросы, взятые командой,
-`C` — коэффициент, посчитанные по формуле выше,
+`C` — коэффициент из таблички выше,
 `N` — общее количество вопросов на турнире (исключая снятые).
 
 # Примеры расчёта trueDL
 
-Возьмём команду с 375 места рейтинга. Если она взяла 18/36 вопросов, её командный trueDL будет 5.0, если 24 — 3.3, если взяла всё, trueDL будет 0, если не взяла ничего — 10.
+Возьмём команду с 251–500 мест рейтинга. Если она взяла 18/36 вопросов, её командный trueDL будет 5.0, если 24 — 3.3, если взяла всё, trueDL будет 0, если не взяла ничего — 10.
 
-Для сравнения, если команда c 5 места взяла 18/36 вопросов, её trueDL будет 6.89:
+Для сравнения, если команда из топ-10 взяла 18/36 вопросов, её trueDL будет 6.89:
 
 ```
 (1 — (18 / 1.61) / 36) × 10 = 6.89
@@ -156,7 +147,7 @@ trueDL = (1 — min(Q / C, N) / N) × 10
 (1 — (36 / 1.61) / 36) × 10 = 3.78
 ```
 
-Если не взяла ничего — trueDL 10, как и у команды с 375 места.
+Если не взяла ничего — trueDL 10, как и у команды с 251–500 мест.
 
 TrueDL турнира, как и текущий DL, равен среднему арифметическому командных trueDL.
 
@@ -166,18 +157,17 @@ TrueDL турнира, как и текущий DL, равен среднему
 
 Тут и далее — только турниры, где корректно введены данные и где сыграло больше 50 команд. Подробные данные можно посмотреть [в таблице][truedl_table], ссылка на которую также есть в приложении.
 
-1. [Часы Судного Дня: Полночь](https://rating.chgk.info/tournament/4664) — 9.3
-2. [Посох Аарона](https://rating.chgk.info/tournament/4426) — 9.2
-3. [Посошок Арончика](https://rating.chgk.info/tournament/4693) — 9.2
-4. [Знание - Сила](https://rating.chgk.info/tournament/2901) — 9.1
-5. [Синхрон высшей лиги Москвы. 1-й тур](https://rating.chgk.info/tournament/3610) — 9.1
-6. [Посох Аарона](https://rating.chgk.info/tournament/3915) — 9.1
-7. [Занавес неведения](https://rating.chgk.info/tournament/4781) — 9.1
-8. [Кубок Тридевятого Вала](https://rating.chgk.info/tournament/2928) — 9.0
-9. [Культурный Террор. Не Ждали?](https://rating.chgk.info/tournament/4881) — 8.9
-10. [Корабль Тесея](https://rating.chgk.info/tournament/3211) — 8.8
-11. [Вавилонский колодец](https://rating.chgk.info/tournament/4011) — 8.8
-12. [Мстители: Монос Аарона](https://rating.chgk.info/tournament/4029) — 8.8
+1. [Часы Судного Дня: Полночь](https://rating.chgk.info/tournament/4664) — trueDL 9.2
+2. [Посох Аарона](https://rating.chgk.info/tournament/3915) — 9.0
+3. [Посох Аарона II](https://rating.chgk.info/tournament/4426) — 9.0
+4. [Посошок Арончика](https://rating.chgk.info/tournament/4693) — 8.9
+5. [Занавес неведения](https://rating.chgk.info/tournament/4781) — 8.8
+6. [Мстители: Монос Аарона](https://rating.chgk.info/tournament/4029) — 8.6
+7. [Вавилонский колодец](https://rating.chgk.info/tournament/4011) — 8.5
+8. [Знание — Сила IV](https://rating.chgk.info/tournament/4425) — 8.5
+9. [Кубок Киберразумистов 2077](https://rating.chgk.info/tournament/4401) — 8.3
+10. [Угрюмый Ёрш](https://rating.chgk.info/tournament/5928) — 8.3
+11. [VERSUS: Немец vs. Шагал](https://rating.chgk.info/tournament/)
 
 [Мемориал Дмитрия Коноваленко — 2018](https://rating.chgk.info/tournament/4721) — cамый сложный очник, 7.8.
 
@@ -237,21 +227,21 @@ TrueDL турнира, как и текущий DL, равен среднему
 ## По trueDL
 
 <label for="pos">Позиция вашей команды в рейтинге</label>
-<input id="pos" value="10"><br>
+<input id="pos" value="10">
 <label for="questions">Количество вопросов в турнире</label>
-<input id="questions" value="36"><br>
+<input id="questions" value="36">
 <label for="difficulty">Сложность турнира</label>
-<input id="difficulty" value="5.0"><br>
+<input id="difficulty" value="5.0">
 <p>Ожидаемое количество взятых: <span id="result"></span></p>
 
 ## По текущему DL
 
 <label for="old_rating">Рейтинг вашей команды</label>
-<input id="old_rating" value="10000"><br>
+<input id="old_rating" value="10000">
 <label for="old_questions">Количество вопросов в турнире</label>
-<input id="old_questions" value="36"><br>
+<input id="old_questions" value="36">
 <label for="old_difficulty">Сложность турнира</label>
-<input id="old_difficulty" value="5.0"><br>
+<input id="old_difficulty" value="5.0">
 <p>Ожидаемое количество взятых: <span id="old_result"></span></p>
 
 # Код и данные
