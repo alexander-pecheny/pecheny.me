@@ -237,21 +237,21 @@ TrueDL турнира, как и текущий DL, равен среднему
 ## По trueDL
 
 <label for="pos">Позиция вашей команды в рейтинге</label>
-<input id="pos" value="10">
+<input id="pos" value="10"><br>
 <label for="questions">Количество вопросов в турнире</label>
-<input id="questions" value="36">
+<input id="questions" value="36"><br>
 <label for="difficulty">Сложность турнира</label>
-<input id="difficulty" value="5.0">
+<input id="difficulty" value="5.0"><br>
 <p>Ожидаемое количество взятых: <span id="result"></span></p>
 
 ## По текущему DL
 
 <label for="old_rating">Рейтинг вашей команды</label>
-<input id="old_rating" value="10000">
+<input id="old_rating" value="10000"><br>
 <label for="old_questions">Количество вопросов в турнире</label>
-<input id="old_questions" value="36">
+<input id="old_questions" value="36"><br>
 <label for="old_difficulty">Сложность турнира</label>
-<input id="old_difficulty" value="5.0">
+<input id="old_difficulty" value="5.0"><br>
 <p>Ожидаемое количество взятых: <span id="old_result"></span></p>
 
 # Код и данные
