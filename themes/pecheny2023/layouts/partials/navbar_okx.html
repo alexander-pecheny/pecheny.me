@@ -1,26 +1,12 @@
-<header id="menu">
-  <div class="container">
-	<span class="logo">{{ .Site.Title }}</span>
-	<a>&#9776;</a>
-  </div>
-</header>
-
 <nav class="navbar">
-  <div class="container">
-	<div class="row">
-	  <div class="eight columns offset-by-two lnum">
-		<ul class="">
-		  {{ $burl := .Site.BaseURL }}
-		  <li class="u-pull-left"> <a href="{{ $burl }}" class="brand" style="font-weight:bold;font-size:normal"> {{ .Site.Title }}</a> <a href="{{ $burl }}/index.xml" class="brand brand-rss"><i class="fa fa-rss"></i></a></li>
-		  <li class="u-pull-right cate">· <a href="{{ $burl }}/okx/2018">2018</a></li>
-		  <li class="u-pull-right cate">· <a href="{{ $burl }}/okx/2017">2017</a></li>
-		  <li class="u-pull-right cate">· <a href="{{ $burl }}/okx/2016">2016</a></li>
-		  <li class="u-pull-right cate">· <a href="{{ $burl }}/okx/2015-2">2015-2</a></li>
-		  <li class="u-pull-right cate">· <a href="{{ $burl }}/okx/2015-1">2015-1</a></li>
-		  <li class="u-pull-right cate"><a href="{{ $burl }}/okx/2014">2014</a></li>
-		  <li class="u-pull-right cate"><a href="{{ $burl }}/okx" class="spaced">ОКХ</a>: </li>
-		</ul>
-	  </div>
-	</div>
-  </div>
+	<ul>
+		{{ $burl := .Site.BaseURL }}
+		<li><a href="{{ $burl }}" class="brand"><img src="/newcat.png" class="iimg lower">&nbsp;на&nbsp;главную</a>&nbsp;<a href="{{ $burl }}/index.xml" class="brand brand-rss"><i class="iimg lower fa fa-rss"></i></a></li>
+		<li><a href="{{ $burl }}/okx/2018">2018</a></li>
+		<li><a href="{{ $burl }}/okx/2017">2017</a></li>
+		<li><a href="{{ $burl }}/okx/2016">2016</a></li>
+		<li><a href="{{ $burl }}/okx/2015-2">2015-2</a></li>
+		<li><a href="{{ $burl }}/okx/2015-1">2015-1</a></li>
+		<li><a href="{{ $burl }}/okx/2014">2014</a></li>
+	</ul>
 </nav>
