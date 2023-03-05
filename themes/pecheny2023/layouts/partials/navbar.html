@@ -1,10 +1,9 @@
 <nav class="navbar">
 	<ul>
-		{{ $burl := .Site.BaseURL }}
-		<li><a href="{{ $burl }}" class="brand"><img src="/newcat.png" class="iimg lower">&nbsp;главная</a></li>
-		<li><a href="{{ $burl }}/blog">блог</a></li>
-		<li><a href="{{ $burl }}/music">музыка</a></li>
-		<li><a href="{{ $burl }}/dreams">сны</a></li>
-		<li><a href="{{ $burl }}/friendsdreams">сны&nbsp;друзей</a></li>
+		<li class="first"><a href="/" class="brand"><img src="/newcat.png" class="iimg lower">&nbsp;главная</a></li><!--
+		--><li><a href="/blog">блог</a></li><!--
+		--><li><a href="/music">музыка</a></li><!--
+		--><li><a href="/dreams">сны</a></li><!--
+		--><li class="last"><a href="/friendsdreams">сны&nbsp;друзей</a></li>
 	</ul>
 </nav>

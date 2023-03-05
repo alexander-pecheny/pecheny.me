@@ -1,5 +1,6 @@
 {{ partial "header.html" . }}
 {{ $relsub := substr .RelPermalink 0 4 }}
+{{ $page := . }}
 {{ if eq $relsub "/okx" }}
 {{ partial "navbar_okx.html" . }}
 {{ else }}
@@ -8,24 +9,22 @@
 
 <div id="post-title">
 <p class="footnote">
-	<time class="">{{ .Date.Format "2006-01-02" }}</time>
-	{{ $baseurl := .Site.BaseURL }}
-	{{ if or .Params.tags .Params.categories .Params.series }}
-	|
-	{{ end }}
-	{{ if isset .Params "tags" }}
-	tags: {{ range .Params.tags }}<a href="{{ $baseurl }}/tags/{{ . | urlize }}">{{ . }}</a> {{ end }}
-	{{ end }}
+    {{ $page.Date.Format "2006-01-02" }}{{ if or $page.Params.tags $page.Params.categories $page.Params.series }},
+    {{ end }}
 
-	{{ if isset .Params "categories" }}
-	categories: {{ range .Params.categories }}<a href="{{ $baseurl }}/categories/{{ . | urlize }}">{{ . }}</a> {{ end }}
-	{{ end }}
+    {{ with $page.Params.tags }}
+    {{ range $page.Params.tags}}<a href="/tags/{{ . | urlize }}">{{ . }}</a> {{ end }}
+    {{ end }}
 
-	{{ if isset .Params "series" }}
-	series: {{ range .Params.series }}<a href="{{ $baseurl }}/series/{{ . | urlize }}">{{ . }}</a> {{ end }}
-	{{ end }}
+    {{ with $page.Params.categories }}
+    {{ range $page.Params.categories }}<a href="/categories/{{ . | urlize }}">{{ . }}</a> {{ end }}
+    {{ end }}
 
-</p>
+    {{ with $page.Params.series }}
+    {{ range $page.Params.series }}<a href="/series/{{ . | urlize }}">{{ . }}</a> {{ end }}
+    {{ end }}
+
+    </p>
 <h1 id="title">{{ .Title }}</h1>
 </div>
 {{ if isset .Params "toc" }}<div id="toc" class="well col-md-4 col-sm-6">

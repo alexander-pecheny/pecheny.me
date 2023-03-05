@@ -4,6 +4,7 @@ date = "2023-02-18T21:00:00+04:00"
 slug = "truedl"
 title = "trueDL — новый алгоритм расчёта сложности турниров"
 type = "blog"
+summary = " "
 toc = true
 aliases = ["/truedl"]
 +++

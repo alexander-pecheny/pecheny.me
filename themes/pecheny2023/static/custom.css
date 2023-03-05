@@ -4,8 +4,8 @@
   --heading-color: #101030;
   --link-underline-color: #bee4d6;
   --accent-color: #129265;
-  --serif-font: "STIX Two Text", serif;
-  --sans-font: Commissioner, sans-serif;
+  --body-font: "Commissioner", serif;
+  --heading-font: "Piazzolla", sans-serif;
   --mono-font: "JetBrains Mono", monospace;
   --mono-font-weight: 500;
   --main-font-size: 20px;
@@ -16,7 +16,7 @@
   :root {
     --background-color: #101010;
     --color: #e0e0e0;
-    --heading-color: #9f9f9f;
+    --heading-color: #c3c3c3;
     --link-underline-color: #2a483e;
     --accent-color: #129265;
   }
@@ -47,7 +47,15 @@ nav.navbar li, .pagination li {
 
 nav.navbar a, .pagination a {
   display: inline-block;
-  padding: 0px 10px;
+  padding: 0px 20px;
+}
+
+li.first a {
+  padding: 0px 20px 0px 0px;
+}
+
+li.last a {
+  padding: 0px 0px 0px 20px;
 }
 
 @media screen and (max-width: 400px) {
@@ -62,9 +70,14 @@ nav.navbar a, .pagination a {
 
 html {
   background-color: var(--background-color);
-  font-family: var(--serif-font);
+  font-family: var(--body-font);
   font-size: var(--main-font-size);
   color: var(--color);
+  line-height: 1.5;
+}
+
+#TableOfContents {
+  margin-top: 48px;
 }
 
 #TableOfContents ol {
@@ -108,12 +121,16 @@ p + p {
   margin-top: 14px;
 }
 
-h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
-  margin-top: 12px;
+h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 16px;
+}
+
+h1+p {
+  margin-top: 24px;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--sans-font);
+  font-family: var(--heading-font);
   color: var(--heading-color);
   margin-top: 80px;
   margin-bottom: 0px;
@@ -133,6 +150,10 @@ h2 {
   font-weight: bold;
 }
 
+.posts h2 {
+  margin-top: 36px;
+}
+
 p+h2 {
   margin-top:36px;
 }
@@ -146,14 +167,14 @@ h3 {
 h1#title {
   font-weight: bold;
   margin-top: 12px;
-  margin-bottom: 60px;
+  margin-bottom: 24px;
   font-size: 42px;
   font-variation-settings: "slnt" 0;
 }
 
 figure {
   max-width: 100%;
-  margin: auto;
+  margin-top: 16px;
 }
 
 figcaption {
@@ -223,8 +244,12 @@ input {
   text-align: center;
 }
 
-.big-margin-top {
-  margin-top: 100px;
+.forcefooter {
+  flex-grow: 1;
+}
+
+.small-margin-top {
+  margin-top: 12px;
 }
 
 .scaps {
@@ -248,4 +273,39 @@ input {
 
 li {
   margin-bottom: 6px;
+}
+
+ul.posts {
+  list-style-type: none;
+  padding-left: 0px;
+  margin-top: 48px;
+}
+
+ul.posts li {
+  margin-top: 0px;
+}
+
+ul.posts li+li {
+  margin-top: 60px;
+}
+
+ul.posts h2 {
+  margin-bottom: 18px;
+  margin-top: 0px;
+}
+
+.summary {
+  font-size: smaller;
+  max-width: 32rem;
+}
+
+.flex-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 60svh;
+}
+
+#footer {
+  margin-top: auto;
+  margin-bottom: 10px;
 }

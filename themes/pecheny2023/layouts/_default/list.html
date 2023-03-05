@@ -9,40 +9,35 @@
 <h1 id="title">{{ .Title }}</h1>
 <p>{{ .Content }}</p>
 <ul class="posts">
-{{ $baseurl := .Site.BaseURL }}
 {{ $section := . }}
 {{ if ne .Params.suppressList true }}
 {{ range $name, $page := .Paginator.Pages }}
 {{ if eq .Type $section.Type }}
 <li>
-	<b><a href="{{ .Permalink }}">{{ $page.Title }}</a></b>
-
-	<p class="footnote">
-	submitted {{ $page.Date.Format "2006-01-02 15:04" }}</time>
-
-	{{ if or $page.Params.tags $page.Params.categories $page.Params.series }}
-	to
-	{{ end }}
-
-	{{ with $page.Params.tags }}
-	tags: [ {{ range $page.Params.tags}}<a href="{{ $baseurl }}/tags/{{ . | urlize }}">{{ . }}</a> {{ end }}]
-	{{ end }}
-
-	{{ with $page.Params.categories }}
-	categories: [ {{ range $page.Params.categories }}<a href="{{ $baseurl }}/categories/{{ . | urlize }}">{{ . }}</a> {{ end }}]
-	{{ end }}
-
-	{{ with $page.Params.series }}
-	series: [ {{ range $page.Params.series }}<a href="{{ $baseurl }}/series/{{ . | urlize }}">{{ . }}</a> {{ end }}]
-	{{ end }}
-
-	</p>
-	<p class="footnote summary">{{ .Summary }}{{ if .Truncated}} <a href="{{ .Permalink }}" style="font-weight: bold;">· · ·</a>{{end}}</p>
+    <h2><a href="{{ .Permalink }}">{{ $page.Title }}</a></h2>
+    <p>{{ .Summary | plainify }}</p>
+    <p class="footnote small-margin-top">
+        {{ $page.Date.Format "2006-01-02" }}{{ if or $page.Params.tags $page.Params.categories $page.Params.series }},
+        {{ end }}
+    
+        {{ with $page.Params.tags }}
+        {{ range $page.Params.tags}}<a href="/tags/{{ . | urlize }}">{{ . }}</a> {{ end }}
+        {{ end }}
+    
+        {{ with $page.Params.categories }}
+        {{ range $page.Params.categories }}<a href="/categories/{{ . | urlize }}">{{ . }}</a> {{ end }}
+        {{ end }}
+    
+        {{ with $page.Params.series }}
+        {{ range $page.Params.series }}<a href="/series/{{ . | urlize }}">{{ . }}</a> {{ end }}
+        {{ end }}
+    
+        </p>
 </li>
 {{ end }}
 {{ end }}
 {{ end }}
 </ul>
-	  {{ partial "pagination.html" . }}
+      {{ partial "pagination.html" . }}
 
 {{ partial "footer.html" . }}
