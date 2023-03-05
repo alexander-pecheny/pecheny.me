@@ -185,7 +185,7 @@ pre {
 code {
   font-family: var(--mono-font);
   font-weight: var(--mono-font-weight);
-  font-size: var(--mono-font-size);
+  font-size: 90%;
   max-width: 100%;
   overflow-x: scroll;
   color: var(--accent-color);
@@ -216,8 +216,15 @@ input {
 .black { color: #000;}
 
 .footnote {
-  font-size: smaller;
+  font-size: small;
+}
 
+.center {
+  text-align: center;
+}
+
+.big-margin-top {
+  margin-top: 100px;
 }
 
 .scaps {
