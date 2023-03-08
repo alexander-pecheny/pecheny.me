@@ -1,0 +1,63 @@
+@font-face {
+    font-family: 'Commissioner';
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+    src: url(/fonts/Commissioner-Regular.woff2) format('woff2');
+}
+@font-face {
+    font-family: 'Commissioner';
+    font-style: italic;
+    font-weight: normal;
+    font-display: swap;
+    src: url(/fonts/Commissioner-Italic.woff2) format('woff2');
+}
+@font-face {
+    font-family: 'Commissioner';
+    font-style: normal;
+    font-weight: bold;
+    font-display: swap;
+    src: url(/fonts/Commissioner-Bold.woff2) format('woff2');
+}
+@font-face {
+    font-family: 'Commissioner';
+    font-style: italic;
+    font-weight: bold;
+    font-display: swap;
+    src: url(/fonts/Commissioner-BoldItalic.woff2) format('woff2');
+}
+@font-face {
+    font-family: 'JetBrains Mono';
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+    src: url(/fonts/JetBrainsMono-Regular.woff2) format('woff2');
+}
+@font-face {
+    font-family: 'Source Serif 4';
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+    src: url(/fonts/SourceSerif4-Regular.otf.woff2) format('woff2');
+}
+@font-face {
+    font-family: 'Source Serif 4';
+    font-style: italic;
+    font-weight: normal;
+    font-display: swap;
+    src: url(/fonts/SourceSerif4-It.otf.woff2) format('woff2');
+}
+@font-face {
+    font-family: 'Source Serif 4';
+    font-style: normal;
+    font-weight: bold;
+    font-display: swap;
+    src: url(/fonts/SourceSerif4-Bold.otf.woff2) format('woff2');
+}
+@font-face {
+    font-family: 'Source Serif 4';
+    font-style: italic;
+    font-weight: bold;
+    font-display: swap;
+    src: url(/fonts/SourceSerif4-BoldIt.otf.woff2) format('woff2');
+}

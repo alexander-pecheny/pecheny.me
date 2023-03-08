@@ -2,7 +2,7 @@
     "contentdir": "content",
     "layoutdir": "layouts",
     "publishdir": "public",
-    "title": "ПЕЧЕНЫЙ",
+    "title": "Alexander Pecheny",
     "theme": "pecheny2023",
 
     "builddrafts": false,
@@ -23,14 +23,14 @@
     },
 
     "params": {
-        "title": "П Е Ч Е Н Ы Й",
-        "author": "Александр Печеный",
+        "title": "Alexander Pecheny",
+        "author": "Alexander Pecheny",
         "dateform": "Feb 17 2015"
     },
 
     "author": {
 
-        "name": "Александр Печеный",
+        "name": "Alexander Pecheny",
         "github": "peczony",
         "bitbucket": "pecheny",
         "twitter": "pecheny",

@@ -1,0 +1,16 @@
+:root {
+  --background-color: #101010;
+  --color: #e0e0e0;
+  --heading-color: #9f9f9f;
+  --link-underline-color: #2a483e;
+  --accent-color: #129265;
+}
+
+html {
+  background-size: cover;
+}
+
+article {
+  padding: 6px 24px 60px 24px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
