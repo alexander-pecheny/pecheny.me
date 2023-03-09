@@ -39,7 +39,7 @@ type = "blog"
 
 Сравнительная таблица:
 
-<img width="100%" src="/kvrm-jury-comparison.png">
+<img width="100%" src="/kvrm-jury-comparison.webp">
 
 ## Путь ответа
 

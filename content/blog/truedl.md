@@ -76,7 +76,7 @@ TrueDL=5.0 у синхрона из 36 вопросов означает: к
 Если так же усреднить данные по всем турнирам, получится вот что:
 
 <figure>
-<img src="/truedl_ratios.png" width="95%">
+<img src="/truedl_ratios.webp" width="95%">
 <figcaption><a href="/truedl_ratios.html">Интерактивная версия</a> (3.6 Мб)</figcaption>
 </figure>
 
