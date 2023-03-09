@@ -7,11 +7,11 @@ description = "Alexander Pecheny’s homepage"
 <figure><img id="mainlogo"></figure>
 <style>
 #mainlogo {
-    content: url("//pecheny.me/img/etoya.png");
+    content: url("/cat-for-light-theme.webp");
 }
 @media screen and (prefers-color-scheme: dark) {
     #mainlogo {
-        content: url("/cat-for-dark-theme.png");
+        content: url("/cat-for-dark-theme.webp");
     }
 }
 </style>
