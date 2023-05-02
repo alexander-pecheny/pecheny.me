@@ -34,4 +34,12 @@
 {{ .Content }}
 </div>
 
+<p class="prev_next">
+{{ if .PrevInSection }}
+<a href="{{.PrevInSection.Permalink}}">← prev</a>
+{{ end }}{{ if .PrevInSection }}{{ if .NextInSection }} · {{ end }}{{ end }}
+{{ if .NextInSection }}<a href="{{.NextInSection.Permalink}}">next →</a>
+{{ end }}
+</p>
+
 {{ partial "footer.html" . }}
