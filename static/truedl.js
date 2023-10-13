@@ -48,6 +48,7 @@ function calculate() {
     expected_questions = Math.round(
         (1 - (_difficulty / 10)) * _questions * coeff
     );
+    expected_questions = Math.max(expected_questions, 0);
     expected_questions = Math.min(expected_questions, _questions);
     result.innerHTML = expected_questions;
 }
@@ -59,6 +60,8 @@ function old_calculate() {
     expected_questions = _old_questions - (
         Math.round(_old_difficulty * 500 * _old_questions / _old_rating)
     );
+    expected_questions = Math.max(expected_questions, 0);
+    expected_questions = Math.min(expected_questions, _old_questions);
     old_result.innerHTML = expected_questions;
 }
 
