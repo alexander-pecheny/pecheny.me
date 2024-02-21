@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8' />
+<link href='fullcalendar.css' rel='stylesheet' />
+<link href='fullcalendar.print.css' rel='stylesheet' media='print' />
+<script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='fullcalendar.min.js'></script>
+<script src='lang/ru.js'></script>
+<script src='gcal.js'></script>
+<script>
+
+	$(document).ready(function() {
+	
+		$('#calendar').fullCalendar({
+
+			googleCalendarApiKey: 'AIzaSyCx_RDs52u2N4afqly_UP6q4mT0FVna-gI',
+		
+			events: 'fs2com4aljragic4s70b90jrd4@group.calendar.google.com',
+			
+			eventClick: function(event) {
+				// opens events in a popup window
+				window.open(event.url, 'gcalevent', 'width=700,height=600');
+				return false;
+			},
+			
+			loading: function(bool) {
+				$('#loading').toggle(bool);
+			},
+
+			eventRender: function(event, element, view) {
+				var ntoday = new Date().getTime();
+				var eventEnd = moment( event.end ).valueOf();
+				var eventStart = moment( event.start ).valueOf();
+				if (event.title.indexOf("Россия") > -1){
+					element.addClass("russia");
+				}
+				if (event.title.indexOf("Беларусь") > -1){
+					element.addClass("belarus");
+				}
+				if (event.title.indexOf("Синхрон") > -1){
+					element.addClass("synch");
+				}
+				if (!event.end){
+				if (eventStart < ntoday){
+				element.addClass("past-event");
+				element.children().addClass("past-event");
+				}
+				} else {
+				if (eventEnd < ntoday){
+				element.addClass("past-event");
+				element.children().addClass("past-event");
+				}
+				}
+				if ( event.allDay === true ) {
+				element.addClass("allday-event");
+				element.children().addClass("allday-event");
+			}
+			} 
+		});
+		
+	});
+
+</script>
+<style>
+
+	body {
+		margin: 40px 10px;
+		padding: 0;
+		font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+		font-size: 14px;
+	}
+		
+	#loading {
+		display: none;
+		position: absolute;
+		top: 10px;
+		right: 10px;
+	}
+
+	#calendar {
+		max-width: 900px;
+		margin: 0 auto;
+	}
+
+	.past-event {opacity: 0.7;}
+
+	.belarus {	background-color: #b71c1c;
+			border-color: #b71c1c;
+			color: #ffebee;}
+
+	.russia {	background-color: #303f9f;
+			border-color: #303f9f;
+			color: #e8eaf6;}
+
+	.synch {	background-color: #558b2f;
+			border-color: #558b2f;
+			color: #f1f8e9;}
+
+
+
+</style>
+</head>
+<body>
+
+	<div id='loading'>loading...</div>
+
+	<div id='calendar'></div>
+
+</body>
+</html>
