@@ -6,3 +6,14 @@ blockquote {font-style: normal;}
 @media (min-width:600px) {
   img.iv {max-width: 66%}
 }
+
+details {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+details a {
+    word-break: break-all;
+    overflow-wrap: break-word;
+}
