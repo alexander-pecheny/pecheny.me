@@ -13,6 +13,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf8">
     <link rel="stylesheet" href="/qy/water.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const toggleButton = document.getElementById('toggle-all-details');
+          toggleButton.addEventListener('click', () => {
+            const detailsElements = document.querySelectorAll('details');
+            // Check if any details is currently closed
+            const anyClosed = Array.from(detailsElements).some(detail => !detail.open);
+
+            if (anyClosed) {
+              // Open all details
+              detailsElements.forEach(detail => detail.open = true);
+              toggleButton.textContent = 'Скрыть все ответы';
+            } else {
+              // Close all details
+              detailsElements.forEach(detail => detail.open = false);
+              toggleButton.textContent = 'Показать все ответы';
+            }
+          });
+        });
+    </script>
 </head>
 <body>
   <div>
