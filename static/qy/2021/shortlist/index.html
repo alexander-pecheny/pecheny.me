@@ -3,69 +3,62 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf8">
-    <meta name="title" content="">
+    <meta name="title" content="Вопрос года — 2021. Шорт-лист">
     <link rel="stylesheet" href="/qy/water.css">
     <link rel="stylesheet" href="/qy/qy.css">
 </head>
 <body>
-<nav style="font-size: small;"><a href="/qy/">home</a> » <a href="/qy/2021/">2021</a> » <a href="/qy/2021/shortlist/">shortlist</a></nav><html>
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf8">
-    <link rel="stylesheet" href="/qy/water.css">
-</head>
-<body>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-          const sortableDiv = document.querySelector(".sortable");
-      
-          if (!sortableDiv) return; // Exit if .sortable div is not present
-      
-          // Get all <p> elements within the .sortable div
-          const paragraphs = Array.from(sortableDiv.querySelectorAll("div"));
-      
-          // Generate a deterministic hash based on the user agent
-          const userAgentHash = (() => {
-            let hash = 0;
-            const userAgent = navigator.userAgent;
-            for (let i = 0; i < userAgent.length; i++) {
-              const char = userAgent.charCodeAt(i);
-              hash = (hash << 5) - hash + char;
-              hash |= 0; // Convert to 32-bit integer
-            }
-            return Math.abs(hash);
-          })();
-      
-          // Sort paragraphs deterministically based on the user agent hash and content hash
-          paragraphs.sort((a, b) => {
-            const aHash = Array.from(a.textContent).reduce((acc, char) => acc + char.charCodeAt(0), 0) * userAgentHash % 1000;
-            const bHash = Array.from(b.textContent).reduce((acc, char) => acc + char.charCodeAt(0), 0) * userAgentHash % 1000;
-            return aHash - bHash;
-          });
-      
-          // Clear the .sortable div
-          sortableDiv.innerHTML = "";
-      
-          // Append sorted paragraphs back to the .sortable div
-          paragraphs.forEach(p => sortableDiv.appendChild(p));
-          const toggleButton = document.getElementById('toggle-all-details');
-          toggleButton.addEventListener('click', () => {
-            const detailsElements = document.querySelectorAll('details');
-            // Check if any details is currently closed
-            const anyClosed = Array.from(detailsElements).some(detail => !detail.open);
+<nav style="font-size: small;"><a href="/qy/">home</a> » <a href="/qy/2021/">2021</a> » <a href="/qy/2021/shortlist/">shortlist</a></nav><script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const sortableDiv = document.querySelector(".sortable");
+  
+      if (!sortableDiv) return; // Exit if .sortable div is not present
+  
+      // Get all <p> elements within the .sortable div
+      const paragraphs = Array.from(sortableDiv.querySelectorAll("div"));
+  
+      // Generate a deterministic hash based on the user agent
+      const userAgentHash = (() => {
+        let hash = 0;
+        const userAgent = navigator.userAgent;
+        for (let i = 0; i < userAgent.length; i++) {
+          const char = userAgent.charCodeAt(i);
+          hash = (hash << 5) - hash + char;
+          hash |= 0; // Convert to 32-bit integer
+        }
+        return Math.abs(hash);
+      })();
+  
+      // Sort paragraphs deterministically based on the user agent hash and content hash
+      paragraphs.sort((a, b) => {
+        const aHash = Array.from(a.textContent).reduce((acc, char) => acc + char.charCodeAt(0), 0) * userAgentHash % 1000;
+        const bHash = Array.from(b.textContent).reduce((acc, char) => acc + char.charCodeAt(0), 0) * userAgentHash % 1000;
+        return aHash - bHash;
+      });
+  
+      // Clear the .sortable div
+      sortableDiv.innerHTML = "";
+  
+      // Append sorted paragraphs back to the .sortable div
+      paragraphs.forEach(p => sortableDiv.appendChild(p));
+      const toggleButton = document.getElementById('toggle-all-details');
+      toggleButton.addEventListener('click', () => {
+        const detailsElements = document.querySelectorAll('details');
+        // Check if any details is currently closed
+        const anyClosed = Array.from(detailsElements).some(detail => !detail.open);
 
-            if (anyClosed) {
-              // Open all details
-              detailsElements.forEach(detail => detail.open = true);
-              toggleButton.textContent = 'Скрыть все ответы';
-            } else {
-              // Close all details
-              detailsElements.forEach(detail => detail.open = false);
-              toggleButton.textContent = 'Показать все ответы';
-            }
-          });
-        });
-    </script>
+        if (anyClosed) {
+          // Open all details
+          detailsElements.forEach(detail => detail.open = true);
+          toggleButton.textContent = 'Скрыть все ответы';
+        } else {
+          // Close all details
+          detailsElements.forEach(detail => detail.open = false);
+          toggleButton.textContent = 'Показать все ответы';
+        }
+      });
+    });
+</script>
   <div>
     <h1>Вопрос года — 2021. Шорт-лист</h1>
     <p>До 17 августа вы можете поучаствовать в выборе приза зрительских симпатий по адресу: <a href="https://forms.gle/KCNQtQftmznLsLwp7">https://forms.gle/KCNQtQftmznLsLwp7</a></p>
@@ -206,5 +199,4 @@ Large branches sway, umbrellas difficult to use<br>
 <p><strong><a href="#QY77">QY77</a>:</strong><span id="QY77_factcheck"></span> в авторском источнике <a href="https://r2.pecheny.me/delay-demotion.webp">не используется</a> формулировка «не удержавшись», а также не говорится, что ротанг может взобраться на новое дерево уже после того, как упал с предыдущего.</p>
 <p><strong><a href="#QY83">QY83</a>:</strong><span id="QY83_factcheck"></span> неочевидно, насколько в данном случае уместно употреблено слово «догонять». Али Атва должен был участвовать в захвате самолёта, однако не сел в него из-за овербукинга. Когда стало ясно, что самолёт захвачен террористами, Атву арестовали греческие власти. Затем в результате обмена греческие заложники вернулись на родину, а Атва был доставлен в Алжир, где и воссоединился с остальными террористами.</p>
 <p><strong><a href="#QY141">QY141</a>:</strong><span id="QY141_factcheck"></span> в <a href="https://r2.pecheny.me/edge-sweep.webp">авторском источнике</a> Сакс не утверждает, что спас хотя бы одну жизнь — цитата звучит как «мы спасли от тяжелых кожных осложнений и прочих проблем более пятисот больных».</p>
-  </div>
-</body></html></body></html>
+  </div></body></html>

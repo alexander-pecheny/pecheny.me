@@ -3,69 +3,62 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf8">
-    <meta name="title" content="">
+    <meta name="title" content="Вопрос года — 2021. Все присланные вопросы">
     <link rel="stylesheet" href="/qy/water.css">
     <link rel="stylesheet" href="/qy/qy.css">
 </head>
 <body>
-<nav style="font-size: small;"><a href="/qy/">home</a> » <a href="/qy/2021/">2021</a> » <a href="/qy/2021/all_nominated/">all_nominated</a></nav><html>
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf8">
-    <link rel="stylesheet" href="/qy/water.css">
-</head>
-<body>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-          const sortableDiv = document.querySelector(".sortable");
-      
-          if (!sortableDiv) return; // Exit if .sortable div is not present
-      
-          // Get all <p> elements within the .sortable div
-          const paragraphs = Array.from(sortableDiv.querySelectorAll("div"));
-      
-          // Generate a deterministic hash based on the user agent
-          const userAgentHash = (() => {
-            let hash = 0;
-            const userAgent = navigator.userAgent;
-            for (let i = 0; i < userAgent.length; i++) {
-              const char = userAgent.charCodeAt(i);
-              hash = (hash << 5) - hash + char;
-              hash |= 0; // Convert to 32-bit integer
-            }
-            return Math.abs(hash);
-          })();
-      
-          // Sort paragraphs deterministically based on the user agent hash and content hash
-          paragraphs.sort((a, b) => {
-            const aHash = Array.from(a.textContent).reduce((acc, char) => acc + char.charCodeAt(0), 0) * userAgentHash % 1000;
-            const bHash = Array.from(b.textContent).reduce((acc, char) => acc + char.charCodeAt(0), 0) * userAgentHash % 1000;
-            return aHash - bHash;
-          });
-      
-          // Clear the .sortable div
-          sortableDiv.innerHTML = "";
-      
-          // Append sorted paragraphs back to the .sortable div
-          paragraphs.forEach(p => sortableDiv.appendChild(p));
-          const toggleButton = document.getElementById('toggle-all-details');
-          toggleButton.addEventListener('click', () => {
-            const detailsElements = document.querySelectorAll('details');
-            // Check if any details is currently closed
-            const anyClosed = Array.from(detailsElements).some(detail => !detail.open);
+<nav style="font-size: small;"><a href="/qy/">home</a> » <a href="/qy/2021/">2021</a> » <a href="/qy/2021/all_nominated/">all_nominated</a></nav><script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const sortableDiv = document.querySelector(".sortable");
+  
+      if (!sortableDiv) return; // Exit if .sortable div is not present
+  
+      // Get all <p> elements within the .sortable div
+      const paragraphs = Array.from(sortableDiv.querySelectorAll("div"));
+  
+      // Generate a deterministic hash based on the user agent
+      const userAgentHash = (() => {
+        let hash = 0;
+        const userAgent = navigator.userAgent;
+        for (let i = 0; i < userAgent.length; i++) {
+          const char = userAgent.charCodeAt(i);
+          hash = (hash << 5) - hash + char;
+          hash |= 0; // Convert to 32-bit integer
+        }
+        return Math.abs(hash);
+      })();
+  
+      // Sort paragraphs deterministically based on the user agent hash and content hash
+      paragraphs.sort((a, b) => {
+        const aHash = Array.from(a.textContent).reduce((acc, char) => acc + char.charCodeAt(0), 0) * userAgentHash % 1000;
+        const bHash = Array.from(b.textContent).reduce((acc, char) => acc + char.charCodeAt(0), 0) * userAgentHash % 1000;
+        return aHash - bHash;
+      });
+  
+      // Clear the .sortable div
+      sortableDiv.innerHTML = "";
+  
+      // Append sorted paragraphs back to the .sortable div
+      paragraphs.forEach(p => sortableDiv.appendChild(p));
+      const toggleButton = document.getElementById('toggle-all-details');
+      toggleButton.addEventListener('click', () => {
+        const detailsElements = document.querySelectorAll('details');
+        // Check if any details is currently closed
+        const anyClosed = Array.from(detailsElements).some(detail => !detail.open);
 
-            if (anyClosed) {
-              // Open all details
-              detailsElements.forEach(detail => detail.open = true);
-              toggleButton.textContent = 'Скрыть все ответы';
-            } else {
-              // Close all details
-              detailsElements.forEach(detail => detail.open = false);
-              toggleButton.textContent = 'Показать все ответы';
-            }
-          });
-        });
-    </script>
+        if (anyClosed) {
+          // Open all details
+          detailsElements.forEach(detail => detail.open = true);
+          toggleButton.textContent = 'Скрыть все ответы';
+        } else {
+          // Close all details
+          detailsElements.forEach(detail => detail.open = false);
+          toggleButton.textContent = 'Показать все ответы';
+        }
+      });
+    });
+</script>
   <div>
     <h1>Вопрос года — 2021. Все присланные вопросы</h1>
     <p>Ниже представлены все вопросы, которые были кем-либо номинированы на «Вопрос года — 2021» и при этом были опубликованы на <a href="https://gotquestions.online">gotquestions</a>.</p>
@@ -862,6 +855,4 @@ NANBH<br>
 <b>Комментарий:</b> учёные знали, что есть ещё какой-то вирус, похожий на вирусы, вызывающие гепатиты A и B, но идентифицировали его только в 1989 году. До этого времени заболевание, вызываемое этим третьим вирусом, называли non-A, non-B hepatitis [нон эй нон би хепата́йтис] — гепатит не A и не B.<br>
 <b>Источники:</b> 1. Story of Discovery: Hepatitis C: from non-A, non-B hepatitis to a cure // NIH (<a href="http://bit.ly/3q0G3cn">http://bit.ly/3q0G3cn</a>).<br>
 2. Alter H. Discovery Of Non-A, Non-B Hepatitis And Identification Of Its Etiology. — Am J Med. — 1999. — doi: 10.1016/s0002-9343(99)00375-7 (<a href="http://bit.ly/3rfCpgp">http://bit.ly/3rfCpgp</a>).</details></div>
-
-  </div>
-</body></html></body></html>
+</div></body></html>
