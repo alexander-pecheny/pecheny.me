@@ -6,62 +6,6 @@
     <meta name="title" content="Вопрос года — 2025. Шорт-лист">
     <link rel="stylesheet" href="/qy/water.css">
     <link rel="stylesheet" href="/qy/qy.css">
-    <style>
-        .rating-group {
-            margin: 10px 0 20px 0;
-            padding: 10px;
-            background: #f5f5f5;
-            border-radius: 5px;
-        }
-        .rating-group label.rating-label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: bold;
-        }
-        .rating-options {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 5px;
-        }
-        .rating-options label {
-            display: inline-flex;
-            align-items: center;
-            padding: 5px 10px;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-            cursor: pointer;
-            background: white;
-        }
-        .rating-options label:hover {
-            background: #e8e8e8;
-        }
-        .rating-options input[type="radio"] {
-            margin-right: 5px;
-        }
-        .rating-options input[type="radio"]:checked + span {
-            font-weight: bold;
-        }
-        .rating-options label:has(input:checked) {
-            background: #d0e8ff;
-            border-color: #4a90d9;
-        }
-        .copy-result-section {
-            margin: 30px 0;
-            padding: 20px;
-            background: #f0f0f0;
-            border-radius: 8px;
-            text-align: center;
-        }
-        .copy-result-section button {
-            font-size: 1.1em;
-            padding: 12px 24px;
-        }
-        .copy-success {
-            color: green;
-            margin-top: 10px;
-            display: none;
-        }
-    </style>
 </head>
 <body>
 <nav style="font-size: small;"><a href="/qy/">home</a> » <a href="/qy/2025/">2025</a> » <a href="/qy/2025/shortlist/">shortlist</a></nav><script>
@@ -179,18 +123,14 @@
 
       const qid = getQuestionId(p);
       if (qid) {
-        const ratingGroup = document.createElement('div');
-        ratingGroup.className = 'rating-group';
+        const ratingGroup = document.createElement('fieldset');
         ratingGroup.innerHTML = `
-          <label class="rating-label">Ваша оценка вопроса ${qid}</label>
-          <div class="rating-options">
-            ${[1,2,3,4,5,6,7,8,9,10].map(n => `
-              <label>
-                <input type="radio" name="rating_${qid}" value="${n}" ${currentState[qid] === n ? 'checked' : ''}>
-                <span>${n}</span>
-              </label>
-            `).join('')}
-          </div>
+          <legend>Ваша оценка вопроса ${qid}</legend>
+          ${[1,2,3,4,5,6,7,8,9,10].map(n => `
+            <label>
+              <input type="radio" name="rating_${qid}" value="${n}" ${currentState[qid] === n ? 'checked' : ''}> ${n}
+            </label>
+          `).join(' ')}
         `;
         sortableDiv.appendChild(ratingGroup);
 
@@ -229,9 +169,9 @@
       const url = window.location.href;
       try {
         await navigator.clipboard.writeText(url);
-        copySuccess.style.display = 'block';
+        copySuccess.hidden = false;
         setTimeout(() => {
-          copySuccess.style.display = 'none';
+          copySuccess.hidden = true;
         }, 3000);
       } catch (err) {
         // Fallback for older browsers
@@ -241,9 +181,9 @@
         textarea.select();
         document.execCommand('copy');
         document.body.removeChild(textarea);
-        copySuccess.style.display = 'block';
+        copySuccess.hidden = false;
         setTimeout(() => {
-          copySuccess.style.display = 'none';
+          copySuccess.hidden = true;
         }, 3000);
       }
     });
@@ -456,10 +396,10 @@
 
 </div>
 
-<div class="copy-result-section">
+<p>
   <button id="copy-result" type="button">Скопировать результат</button>
-  <p id="copy-success" class="copy-success">Ссылка скопирована в буфер обмена!</p>
-</div>
+  <span id="copy-success" hidden>Ссылка скопирована в буфер обмена!</span>
+</p>
 
 <div id="factcheck">
 <h2>Фактчек</h2>
