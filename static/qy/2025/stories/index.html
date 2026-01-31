@@ -26,12 +26,23 @@
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
-  padding: 40px 0;
+  padding: 20px 10px 40px 10px;
+  box-sizing: border-box;
+}
+
+@media (min-width: 700px) {
+  .card-stack-container {
+    padding: 20px 50px 40px 50px;
+  }
+}
+
+.card-stack-wrapper {
+  position: relative;
 }
 
 .card-stack {
   position: relative;
-  min-height: 400px;
+  min-height: 200px;
   perspective: 1000px;
 }
 
@@ -47,7 +58,6 @@
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.1);
   padding: 24px;
-  transition: all 0.4s ease;
   cursor: default;
   box-sizing: border-box;
 }
@@ -64,19 +74,16 @@
 
 .card.behind-1 {
   z-index: 99;
-  opacity: 0.7;
   transform: translateX(-50%) rotate(-2deg) translateY(8px) scale(0.97);
 }
 
 .card.behind-2 {
   z-index: 98;
-  opacity: 0.5;
   transform: translateX(-50%) rotate(3deg) translateY(16px) scale(0.94);
 }
 
 .card.behind-3 {
   z-index: 97;
-  opacity: 0.3;
   transform: translateX(-50%) rotate(-1deg) translateY(24px) scale(0.91);
 }
 
@@ -137,40 +144,57 @@
   }
 }
 
-.card-nav {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  margin-top: 20px;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.card-nav button {
-  background: var(--button-base);
-  color: var(--text-main);
+.card-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 200;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--background);
   border: 1px solid var(--border);
-  padding: 10px 20px;
-  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
   cursor: pointer;
-  font-size: 14px;
-  transition: background 0.2s;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-main);
+  padding: 0;
 }
 
-.card-nav button:hover:not(:disabled) {
+.card-nav-btn.prev {
+  left: 4px;
+}
+
+.card-nav-btn.next {
+  right: 4px;
+}
+
+@media (min-width: 700px) {
+  .card-nav-btn.prev {
+    left: -44px;
+  }
+  .card-nav-btn.next {
+    right: -44px;
+  }
+}
+
+.card-nav-btn:hover:not(:disabled) {
   background: var(--button-hover);
 }
 
-.card-nav button:disabled {
-  opacity: 0.4;
+.card-nav-btn:disabled {
+  opacity: 0.3;
   cursor: not-allowed;
 }
 
 .card-counter {
-  font-size: 14px;
+  font-size: 13px;
   color: var(--text-muted);
-  min-width: 80px;
   text-align: center;
+  margin-bottom: 8px;
 }
 
 .comments-section {
@@ -204,14 +228,20 @@
   color: var(--text-muted);
   margin-top: 12px;
 }
+
+@media (max-width: 768px) {
+  .keyboard-hint {
+    display: none;
+  }
+}
 </style>
 
 <div class="card-stack-container" id="cardStackContainer">
-  <div class="card-stack" id="cardStack"></div>
-  <div class="card-nav">
-    <button id="prevBtn" onclick="navigateCards(-1)">← Назад</button>
-    <span class="card-counter" id="cardCounter">1 / 1</span>
-    <button id="nextBtn" onclick="navigateCards(1)">Вперёд →</button>
+  <div class="card-counter" id="cardCounter">1 / 1</div>
+  <div class="card-stack-wrapper">
+    <button class="card-nav-btn prev" id="prevBtn" onclick="navigateCards(-1)">&#8249;</button>
+    <div class="card-stack" id="cardStack"></div>
+    <button class="card-nav-btn next" id="nextBtn" onclick="navigateCards(1)">&#8250;</button>
   </div>
   <div class="keyboard-hint">Клавиши ← → для навигации</div>
   <div class="comments-section" id="commentsSection">
@@ -265,6 +295,26 @@ function renderCards() {
   });
 
   updateCardPositions();
+  updateStackHeight();
+}
+
+function updateStackHeight() {
+  const stack = document.getElementById('cardStack');
+  const cards = document.querySelectorAll('.card');
+  let maxHeight = 0;
+  // First pass: find max height
+  cards.forEach(card => {
+    card.style.minHeight = '';
+    if (card.offsetHeight > maxHeight) {
+      maxHeight = card.offsetHeight;
+    }
+  });
+  // Second pass: set all cards to same height
+  cards.forEach(card => {
+    card.style.minHeight = maxHeight + 'px';
+  });
+  // Add 30px for the "behind" cards visual offset
+  stack.style.height = (maxHeight + 30) + 'px';
 }
 
 function updateCardPositions() {
@@ -328,6 +378,29 @@ document.addEventListener('keydown', (e) => {
     navigateCards(1);
   }
 });
+
+// Swipe support for mobile
+let touchStartX = 0;
+let touchEndX = 0;
+const stack = document.getElementById('cardStack');
+
+stack.addEventListener('touchstart', (e) => {
+  touchStartX = e.changedTouches[0].screenX;
+}, { passive: true });
+
+stack.addEventListener('touchend', (e) => {
+  touchEndX = e.changedTouches[0].screenX;
+  const diff = touchStartX - touchEndX;
+  if (Math.abs(diff) > 50) {
+    if (diff > 0) {
+      navigateCards(1); // swipe left = next
+    } else {
+      navigateCards(-1); // swipe right = prev
+    }
+  }
+}, { passive: true });
+
+window.addEventListener('resize', updateStackHeight);
 
 renderCards();
 </script>
