@@ -247,7 +247,7 @@ TrueDL турнира, как и текущий DL, равен среднему
 
 # Код и данные
 
-1. Код лежит на гитлабе: https://gitlab.com/peczony/truedl
+1. Код лежит на гитлабе: https://code.pecheny.me/pecheny/truedl
 2. [Гугл-табличка с trueDL для всех турниров][truedl_table].
 3. [Данные на гугл-диске (260 Мб)][data_link]
 
