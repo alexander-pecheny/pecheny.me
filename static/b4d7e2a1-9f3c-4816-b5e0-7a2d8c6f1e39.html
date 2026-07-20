@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="https://pecheny.me/qy/water.css">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <style>
+        :root {
+            --background-body: var(--tg-theme-bg-color, #fff);
+            --background: var(--tg-theme-secondary-bg-color, #f0f0f0);
+            --text-main: var(--tg-theme-text-color, #000);
+            --text-muted: var(--tg-theme-hint-color, #999);
+            --links: var(--tg-theme-link-color, #3390ec);
+            --focus: var(--tg-theme-button-color, #3390ec);
+            --border: var(--tg-theme-hint-color, #ddd);
+        }
+        body { padding: 12px 16px 100px; }
+        label { text-transform: uppercase; letter-spacing: 0.5px; font-size: 13px; }
+        #amount {
+            font-size: 32px;
+            font-weight: 700;
+            border: none;
+            border-bottom: 2px solid var(--border);
+            border-radius: 0;
+            padding: 8px 0;
+            background: transparent;
+        }
+        #amount:focus { border-bottom-color: var(--focus); box-shadow: none; }
+        .pills { display: flex; gap: 8px; flex-wrap: wrap; }
+        .pill {
+            padding: 8px 16px;
+            border-radius: 20px;
+            border: 2px solid var(--border);
+            background: transparent;
+            color: var(--text-main);
+            font-size: 15px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+        .pill.selected {
+            background: var(--tg-theme-button-color, #3390ec);
+            color: var(--tg-theme-button-text-color, #fff);
+            border-color: var(--tg-theme-button-color, #3390ec);
+        }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+        .grid-btn {
+            padding: 10px 8px;
+            border-radius: 12px;
+            border: 2px solid var(--border);
+            background: transparent;
+            color: var(--text-main);
+            font-size: 13px;
+            cursor: pointer;
+            text-align: center;
+            word-break: break-word;
+        }
+        .grid-btn.selected {
+            background: var(--tg-theme-button-color, #3390ec);
+            color: var(--tg-theme-button-text-color, #fff);
+            border-color: var(--tg-theme-button-color, #3390ec);
+        }
+        #comment {
+            border: none;
+            border-bottom: 2px solid var(--border);
+            border-radius: 0;
+            padding: 8px 0;
+            background: transparent;
+        }
+        #comment:focus { border-bottom-color: var(--focus); box-shadow: none; }
+    </style>
+</head>
+<body>
+    <div id="app"></div>
+    <script>
+        var tg = window.Telegram && window.Telegram.WebApp;
+        if (!tg || !tg.initData) {
+            document.body.style.display = 'none';
+        } else {
+            tg.ready();
+            tg.expand();
+
+            var params = new URLSearchParams(window.location.search);
+            var categories = (params.get('c') || '').split('|').filter(Boolean);
+            var currencies = (params.get('cur') || '').split('|').filter(Boolean);
+
+            if (!categories.length || !currencies.length) {
+                document.body.style.display = 'none';
+            } else {
+                buildApp(categories, currencies);
+            }
+        }
+
+        function buildApp(categories, currencies) {
+            var selectedCurrency = currencies[0];
+            var selectedCategory = null;
+
+            var app = document.getElementById('app');
+            app.innerHTML =
+                '<label for="amount">\u0421\u0443\u043c\u043c\u0430</label>' +
+                '<input type="text" inputmode="decimal" id="amount" placeholder="0" autofocus>' +
+                '<label>\u0412\u0430\u043b\u044e\u0442\u0430</label>' +
+                '<div class="pills" id="currencies"></div>' +
+                '<label>\u041a\u0430\u0442\u0435\u0433\u043e\u0440\u0438\u044f</label>' +
+                '<div class="grid" id="categories"></div>' +
+                '<label for="comment">\u041a\u043e\u043c\u043c\u0435\u043d\u0442\u0430\u0440\u0438\u0439</label>' +
+                '<input type="text" id="comment" placeholder="\u041d\u0435\u043e\u0431\u044f\u0437\u0430\u0442\u0435\u043b\u044c\u043d\u043e">';
+
+            var curContainer = document.getElementById('currencies');
+            currencies.forEach(function(cur) {
+                var btn = document.createElement('button');
+                btn.textContent = cur;
+                btn.className = 'pill' + (cur === selectedCurrency ? ' selected' : '');
+                btn.addEventListener('click', function() {
+                    selectedCurrency = cur;
+                    curContainer.querySelectorAll('.pill').forEach(function(b) {
+                        b.classList.remove('selected');
+                    });
+                    btn.classList.add('selected');
+                    if (tg.HapticFeedback) tg.HapticFeedback.selectionChanged();
+                });
+                curContainer.appendChild(btn);
+            });
+
+            var catContainer = document.getElementById('categories');
+            categories.forEach(function(cat) {
+                var btn = document.createElement('button');
+                btn.textContent = cat;
+                btn.className = 'grid-btn';
+                btn.addEventListener('click', function() {
+                    selectedCategory = cat;
+                    catContainer.querySelectorAll('.grid-btn').forEach(function(b) {
+                        b.classList.remove('selected');
+                    });
+                    btn.classList.add('selected');
+                    if (tg.HapticFeedback) tg.HapticFeedback.selectionChanged();
+                    updateMainButton();
+                });
+                catContainer.appendChild(btn);
+            });
+
+            var mainBtn = tg.MainButton;
+            mainBtn.setText('\u0421\u043e\u0445\u0440\u0430\u043d\u0438\u0442\u044c');
+
+            function getAmount() {
+                var val = (document.getElementById('amount').value || '').replace(',', '.');
+                var num = parseFloat(val);
+                return (num > 0) ? num : 0;
+            }
+
+            function updateMainButton() {
+                if (getAmount() > 0 && selectedCategory) {
+                    mainBtn.show();
+                } else {
+                    mainBtn.hide();
+                }
+            }
+
+            document.getElementById('amount').addEventListener('input', updateMainButton);
+
+            mainBtn.onClick(function() {
+                var amount = getAmount();
+                if (!amount || !selectedCategory) return;
+
+                mainBtn.showProgress();
+
+                var data = {
+                    amount: amount,
+                    currency: selectedCurrency,
+                    category: selectedCategory
+                };
+                var comment = document.getElementById('comment').value.trim();
+                if (comment) data.comment = comment;
+
+                tg.sendData(JSON.stringify(data));
+            });
+        }
+    </script>
+</body>
+</html>
